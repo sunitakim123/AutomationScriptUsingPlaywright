@@ -2,46 +2,46 @@
 <testng-results ignored="2" total="9" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-30T16:08:15 IST" name="Suite" finished-at="2024-12-30T16:08:46 IST" duration-ms="30954">
+  <suite started-at="2024-12-30T16:52:44 IST" name="Suite" finished-at="2024-12-30T16:53:03 IST" duration-ms="19327">
     <groups>
     </groups>
-    <test started-at="2024-12-30T16:08:15 IST" name="Test" finished-at="2024-12-30T16:08:46 IST" duration-ms="30954">
+    <test started-at="2024-12-30T16:52:44 IST" name="Test" finished-at="2024-12-30T16:53:03 IST" duration-ms="19327">
       <class name="Resource.BaseTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Resource.BaseTest@5afa3c9]" started-at="2024-12-30T16:08:02 IST" name="setUp" finished-at="2024-12-30T16:08:15 IST" duration-ms="12425" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Resource.BaseTest@6f204a1a]" started-at="2024-12-30T16:52:33 IST" name="setUp" finished-at="2024-12-30T16:52:44 IST" duration-ms="11122" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="quitPlaywright()[pri:0, instance:Resource.BaseTest@5afa3c9]" started-at="2024-12-30T16:08:47 IST" name="quitPlaywright" finished-at="2024-12-30T16:08:47 IST" duration-ms="581" status="PASS">
+        <test-method is-config="true" signature="quitPlaywright()[pri:0, instance:Resource.BaseTest@6f204a1a]" started-at="2024-12-30T16:53:04 IST" name="quitPlaywright" finished-at="2024-12-30T16:53:04 IST" duration-ms="359" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitPlaywright -->
       </class> <!-- Resource.BaseTest -->
       <class name="com.SignUP">
-        <test-method signature="Sign_Up_with_Valid_Credentials()[pri:1, instance:com.SignUP@4681c175]" started-at="2024-12-30T16:08:15 IST" name="Sign_Up_with_Valid_Credentials" finished-at="2024-12-30T16:08:25 IST" duration-ms="10192" status="PASS">
+        <test-method signature="Sign_Up_with_Valid_Credentials()[pri:1, instance:com.SignUP@38467116]" started-at="2024-12-30T16:52:44 IST" name="Sign_Up_with_Valid_Credentials" finished-at="2024-12-30T16:52:52 IST" duration-ms="7831" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Sign_Up_with_Valid_Credentials -->
-        <test-method signature="Sign_Up_with_an_already_Registered_Email()[pri:2, instance:com.SignUP@4681c175]" started-at="2024-12-30T16:08:25 IST" name="Sign_Up_with_an_already_Registered_Email" finished-at="2024-12-30T16:08:31 IST" duration-ms="5533" status="PASS">
+        <test-method signature="Sign_Up_with_an_already_Registered_Email()[pri:2, instance:com.SignUP@38467116]" started-at="2024-12-30T16:52:52 IST" name="Sign_Up_with_an_already_Registered_Email" finished-at="2024-12-30T16:52:56 IST" duration-ms="4237" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Sign_Up_with_an_already_Registered_Email -->
-        <test-method signature="SignUp_with_an_Invalid_EmailID()[pri:3, instance:com.SignUP@4681c175]" started-at="2024-12-30T16:08:31 IST" name="SignUp_with_an_Invalid_EmailID" finished-at="2024-12-30T16:08:34 IST" duration-ms="2984" status="PASS">
+        <test-method signature="SignUp_with_an_Invalid_EmailID()[pri:3, instance:com.SignUP@38467116]" started-at="2024-12-30T16:52:56 IST" name="SignUp_with_an_Invalid_EmailID" finished-at="2024-12-30T16:52:57 IST" duration-ms="1571" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignUp_with_an_Invalid_EmailID -->
-        <test-method signature="SignUp_with_Password_ConfirmPassword_Missmatch()[pri:4, instance:com.SignUP@4681c175]" started-at="2024-12-30T16:08:34 IST" name="SignUp_with_Password_ConfirmPassword_Missmatch" finished-at="2024-12-30T16:08:36 IST" duration-ms="2850" status="PASS">
+        <test-method signature="SignUp_with_Password_ConfirmPassword_Missmatch()[pri:4, instance:com.SignUP@38467116]" started-at="2024-12-30T16:52:57 IST" name="SignUp_with_Password_ConfirmPassword_Missmatch" finished-at="2024-12-30T16:52:59 IST" duration-ms="1570" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignUp_with_Password_ConfirmPassword_Missmatch -->
-        <test-method signature="SignUp_with_a_Password_Less_Than_6_Characters()[pri:5, instance:com.SignUP@4681c175]" started-at="2024-12-30T16:08:36 IST" name="SignUp_with_a_Password_Less_Than_6_Characters" finished-at="2024-12-30T16:08:40 IST" duration-ms="3638" status="PASS">
+        <test-method signature="SignUp_with_a_Password_Less_Than_6_Characters()[pri:5, instance:com.SignUP@38467116]" started-at="2024-12-30T16:52:59 IST" name="SignUp_with_a_Password_Less_Than_6_Characters" finished-at="2024-12-30T16:53:00 IST" duration-ms="1345" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignUp_with_a_Password_Less_Than_6_Characters -->
-        <test-method signature="SignUp_with_an_Email_Containing_Invalid_Characters_Space()[pri:6, instance:com.SignUP@4681c175]" started-at="2024-12-30T16:08:40 IST" name="SignUp_with_an_Email_Containing_Invalid_Characters_Space" finished-at="2024-12-30T16:08:43 IST" duration-ms="3102" status="PASS">
+        <test-method signature="SignUp_with_an_Email_Containing_Invalid_Characters_Space()[pri:6, instance:com.SignUP@38467116]" started-at="2024-12-30T16:53:00 IST" name="SignUp_with_an_Email_Containing_Invalid_Characters_Space" finished-at="2024-12-30T16:53:02 IST" duration-ms="1310" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignUp_with_an_Email_Containing_Invalid_Characters_Space -->
-        <test-method signature="SignUp_with_an_Password_Containing_Invalid_Characters_Space()[pri:7, instance:com.SignUP@4681c175]" started-at="2024-12-30T16:08:43 IST" name="SignUp_with_an_Password_Containing_Invalid_Characters_Space" finished-at="2024-12-30T16:08:46 IST" duration-ms="2388" status="PASS">
+        <test-method signature="SignUp_with_an_Password_Containing_Invalid_Characters_Space()[pri:7, instance:com.SignUP@38467116]" started-at="2024-12-30T16:53:02 IST" name="SignUp_with_an_Password_Containing_Invalid_Characters_Space" finished-at="2024-12-30T16:53:03 IST" duration-ms="1387" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignUp_with_an_Password_Containing_Invalid_Characters_Space -->
