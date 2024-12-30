@@ -3,14 +3,7 @@
   <groupId>com.w2a</groupId>
   <artifactId>AutomationUsingPlaywright</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <properties>
-    <maven.test.jvm.args>-Ddisplay=:0</maven.test.jvm.args>
-</properties>
-
   <build>
-  
-  
-  
 		<plugins>
 			      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
