@@ -24,6 +24,7 @@ public class SignUP extends BaseTest {
 
 	@Test(priority=1)
 	public void Sign_Up_with_Valid_Credentials() throws IOException, InterruptedException {
+		//url opened
 		page.navigate(properties.getProperty("rootUrl"));
 		page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Sign Up Sign Up For Free")).click();
 		//page.navigate("https://awspf.com/signup");
