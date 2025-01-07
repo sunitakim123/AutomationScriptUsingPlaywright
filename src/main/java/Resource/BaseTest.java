@@ -41,10 +41,19 @@ import java.util.Properties;
 	        } else {
 	            browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
 	        }
+	        
+	        
+	        
+	        context = browser.newContext(new Browser.NewContextOptions().setViewportSize(1524, 1024));
 
-	        context = browser.newContext();
+	       // context = browser.newContext();
 	        page = context.newPage();
+	        int timeout = Integer.parseInt(properties.getProperty("defaultTimeout", "60000")); // default to 30 seconds
+	        page.setDefaultTimeout(timeout);
+
 	        page.navigate(properties.getProperty("rootUrl"));
+
+	        
 	    }
 
 	   

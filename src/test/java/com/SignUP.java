@@ -22,10 +22,13 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 
 public class SignUP extends BaseTest {
 
+	
+	
+	
 	@Test(priority=1)
 	public void Sign_Up_with_Valid_Credentials() throws IOException, InterruptedException {
-		//url opened
-		page.navigate(properties.getProperty("rootUrl"));
+		//ok
+	//	page.navigate(properties.getProperty("rootUrl"));
 		page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Sign Up Sign Up For Free")).click();
 		//page.navigate("https://awspf.com/signup");
 		page.getByPlaceholder("Email Address").fill(generateRandomEmail());
@@ -61,7 +64,6 @@ public class SignUP extends BaseTest {
 	@Test(priority=3)
 	 public void SignUp_with_an_Invalid_EmailID()  throws IOException, InterruptedException {
 		page.navigate(properties.getProperty("rootUrl"));
-
 		  page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Sign Up").setExact(true)).click();
 		  page.getByPlaceholder("Email Address").fill("valid");
 	      page.getByPlaceholder("Password", new Page.GetByPlaceholderOptions().setExact(true)).fill("ValidPass123");
