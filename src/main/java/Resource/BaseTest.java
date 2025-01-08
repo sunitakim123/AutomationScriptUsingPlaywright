@@ -44,11 +44,11 @@ import java.util.Properties;
 	        
 	        
 	        
-	        context = browser.newContext(new Browser.NewContextOptions().setViewportSize(1524, 1024));
+	        context = browser.newContext(new Browser.NewContextOptions().setViewportSize(1424, 1024));
 
 	       // context = browser.newContext();
 	        page = context.newPage();
-	        int timeout = Integer.parseInt(properties.getProperty("defaultTimeout", "60000")); // default to 30 seconds
+	        int timeout = Integer.parseInt(properties.getProperty("defaultTimeout", "80000")); // default to 30 seconds
 	        page.setDefaultTimeout(timeout);
 
 	        page.navigate(properties.getProperty("rootUrl"));

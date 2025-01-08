@@ -8,6 +8,7 @@
     <classes>
       <class name="Resource.BaseTest"/>
       <class name="com.SignUP"/>
+        <class name="com.Login"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

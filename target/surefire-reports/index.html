@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.SignUP" class="method navigator-link" hash-for-method="SignUp_with_Password_ConfirmPassword_Missmatch">SignUp_with_Password_ConfirmPassword_Missmatch</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.SignUP" class="method navigator-link" hash-for-method="Sign_Up_with_an_already_Registered_Email">Sign_Up_with_an_already_Registered_Email</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -115,6 +115,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.SignUP" class="method navigator-link" hash-for-method="SignUp_with_Password_ConfirmPassword_Missmatch">SignUp_with_Password_ConfirmPassword_Missmatch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.SignUP" class="method navigator-link" hash-for-method="SignUp_with_a_Password_Less_Than_6_Characters">SignUp_with_a_Password_Less_Than_6_Characters</a> <!-- method navigator-link -->
@@ -140,11 +145,6 @@
                         <a href="#" panel-name="suite-Suite" title="com.SignUP" class="method navigator-link" hash-for-method="Sign_Up_with_Valid_Credentials">Sign_Up_with_Valid_Credentials</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.SignUP" class="method navigator-link" hash-for-method="Sign_Up_with_an_already_Registered_Email">Sign_Up_with_an_already_Registered_Email</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
@@ -165,22 +165,22 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="SignUp_with_Password_ConfirmPassword_Missmatch">
-                  </a> <!-- SignUp_with_Password_ConfirmPassword_Missmatch -->
-                  <span class="method-name">SignUp_with_Password_ConfirmPassword_Missmatch</span>
+                  <a name="Sign_Up_with_an_already_Registered_Email">
+                  </a> <!-- Sign_Up_with_an_already_Registered_Email -->
+                  <span class="method-name">Sign_Up_with_an_already_Registered_Email</span>
                   <div class="stack-trace">com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 30000ms exceeded.
+  message=&apos;Timeout 80000ms exceeded.
   name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\progress.js:75:26)
-    at Frame.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\frames.js:1072:23)
-    at FrameDispatcher.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\dispatchers\frameDispatcher.js:170:30)
-    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\dispatchers\dispatcher.js:361:39)
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\progress.js:75:26)
+    at Frame.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\frames.js:1072:23)
+    at FrameDispatcher.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\dispatchers\frameDispatcher.js:170:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\dispatchers\dispatcher.js:361:39)
 }
 Call log:
 -   - waiting for getByPlaceholder(&quot;Email Address&quot;)
--     - waiting for&quot; https://awspf.com/&quot; navigation to finish...
+-     - waiting for navigation to finish...
 -     - navigated to &quot;https://awspf.com/&quot;
 
 	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
@@ -196,21 +196,21 @@ Call log:
 	at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:325)
 	at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:250)
 	at com.microsoft.playwright.Locator.fill(Locator.java:3075)
-	at com.SignUP.SignUp_with_Password_ConfirmPassword_Missmatch(SignUP.java:79)
+	at com.SignUP.Sign_Up_with_an_already_Registered_Email(SignUP.java:52)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 Caused by: com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 30000ms exceeded.
+  message=&apos;Timeout 80000ms exceeded.
   name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\progress.js:75:26)
-    at Frame.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\frames.js:1072:23)
-    at FrameDispatcher.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\dispatchers\frameDispatcher.js:170:30)
-    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\dispatchers\dispatcher.js:361:39)
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\progress.js:75:26)
+    at Frame.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\frames.js:1072:23)
+    at FrameDispatcher.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\dispatchers\frameDispatcher.js:170:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\dispatchers\dispatcher.js:361:39)
 }
 Call log:
 -   - waiting for getByPlaceholder(&quot;Email Address&quot;)
--     - waiting for&quot; https://awspf.com/&quot; navigation to finish...
+-     - waiting for navigation to finish...
 -     - navigated to &quot;https://awspf.com/&quot;
 
 	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
@@ -229,6 +229,13 @@ Call log:
               <span class="class-name">com.SignUP</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="SignUp_with_Password_ConfirmPassword_Missmatch">
+                  </a> <!-- SignUp_with_Password_ConfirmPassword_Missmatch -->
+                  <span class="method-name">SignUp_with_Password_ConfirmPassword_Missmatch</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="SignUp_with_a_Password_Less_Than_6_Characters">
@@ -262,13 +269,6 @@ Call log:
                   <a name="Sign_Up_with_Valid_Credentials">
                   </a> <!-- Sign_Up_with_Valid_Credentials -->
                   <span class="method-name">Sign_Up_with_Valid_Credentials</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Sign_Up_with_an_already_Registered_Email">
-                  </a> <!-- Sign_Up_with_an_already_Registered_Email -->
-                  <span class="method-name">Sign_Up_with_an_already_Registered_Email</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -331,38 +331,38 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'SignUp_with_Password_ConfirmPassword_Missmatch')
+data.setCell(0, 1, 'Sign_Up_with_an_already_Registered_Email')
 data.setCell(0, 2, 'com.SignUP')
-data.setCell(0, 3, 31861);
+data.setCell(0, 3, 84269);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Sign_Up_with_Valid_Credentials')
 data.setCell(1, 2, 'com.SignUP')
-data.setCell(1, 3, 17340);
+data.setCell(1, 3, 16325);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Sign_Up_with_an_already_Registered_Email')
+data.setCell(2, 1, 'SignUp_with_a_Password_Less_Than_6_Characters')
 data.setCell(2, 2, 'com.SignUP')
-data.setCell(2, 3, 6027);
+data.setCell(2, 3, 5408);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'SignUp_with_an_Password_Containing_Invalid_Characters_Space')
+data.setCell(3, 1, 'SignUp_with_an_Invalid_EmailID')
 data.setCell(3, 2, 'com.SignUP')
-data.setCell(3, 3, 3128);
+data.setCell(3, 3, 5391);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'SignUp_with_an_Invalid_EmailID')
+data.setCell(4, 1, 'SignUp_with_an_Password_Containing_Invalid_Characters_Space')
 data.setCell(4, 2, 'com.SignUP')
-data.setCell(4, 3, 2863);
+data.setCell(4, 3, 5200);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'SignUp_with_a_Password_Less_Than_6_Characters')
+data.setCell(5, 1, 'SignUp_with_Password_ConfirmPassword_Missmatch')
 data.setCell(5, 2, 'com.SignUP')
-data.setCell(5, 3, 2847);
+data.setCell(5, 3, 5113);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'SignUp_with_an_Email_Containing_Invalid_Characters_Space')
 data.setCell(6, 2, 'com.SignUP')
-data.setCell(6, 3, 2772);
+data.setCell(6, 3, 4823);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -407,40 +407,40 @@ return data;
               <div class="chronological-class-name">com.SignUP</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">Sign_Up_with_Valid_Credentials</span>
-                <span class="method-start">18478 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">Sign_Up_with_an_already_Registered_Email</span>
-                <span class="method-start">35839 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SignUp_with_an_Invalid_EmailID</span>
-                <span class="method-start">41871 ms</span>
+                <span class="method-start">16049 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
+                <span class="method-name">Sign_Up_with_an_already_Registered_Email</span>
+                <span class="method-start">32449 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SignUp_with_an_Invalid_EmailID</span>
+                <span class="method-start">117079 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">SignUp_with_Password_ConfirmPassword_Missmatch</span>
-                <span class="method-start">44738 ms</span>
+                <span class="method-start">122471 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SignUp_with_a_Password_Less_Than_6_Characters</span>
-                <span class="method-start">76836 ms</span>
+                <span class="method-start">127586 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SignUp_with_an_Email_Containing_Invalid_Characters_Space</span>
-                <span class="method-start">79687 ms</span>
+                <span class="method-start">132998 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SignUp_with_an_Password_Containing_Invalid_Characters_Space</span>
-                <span class="method-start">82462 ms</span>
+                <span class="method-start">137824 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Resource.BaseTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">quitPlaywright</span>
-                <span class="method-start">86878 ms</span>
+                <span class="method-start">143876 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

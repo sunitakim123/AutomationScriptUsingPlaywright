@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.SignUP">
+      <class name="com.Login">
         <methods>
-          <include name="SignUp_with_an_Invalid_EmailID"/>
-          <include name="launch_Roorturl"/>
+          <include name="Login_with_valid_emailAndpassword"/>
           <include name="setUp"/>
           <include name="quitPlaywright"/>
-          <include name="Sign_Up_with_an_already_Registered_Email"/>
         </methods>
-      </class> <!-- com.SignUP -->
+      </class> <!-- com.Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

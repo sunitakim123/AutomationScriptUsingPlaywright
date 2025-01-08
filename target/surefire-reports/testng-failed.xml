@@ -10,7 +10,7 @@
         <methods>
           <include name="setUp"/>
           <include name="quitPlaywright"/>
-          <include name="SignUp_with_Password_ConfirmPassword_Missmatch"/>
+          <include name="Sign_Up_with_an_already_Registered_Email"/>
         </methods>
       </class> <!-- com.SignUP -->
     </classes>

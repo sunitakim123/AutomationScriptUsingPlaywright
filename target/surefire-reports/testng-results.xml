@@ -2,66 +2,58 @@
 <testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-31T15:22:53 IST" name="Suite" finished-at="2024-12-31T15:24:00 IST" duration-ms="67192">
+  <suite started-at="2025-01-07T13:51:52 IST" name="Suite" finished-at="2025-01-07T13:53:59 IST" duration-ms="127053">
     <groups>
     </groups>
-    <test started-at="2024-12-31T15:22:53 IST" name="Test" finished-at="2024-12-31T15:24:00 IST" duration-ms="67192">
+    <test started-at="2025-01-07T13:51:52 IST" name="Test" finished-at="2025-01-07T13:53:59 IST" duration-ms="127053">
       <class name="Resource.BaseTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Resource.BaseTest@7526515b]" started-at="2024-12-31T15:22:35 IST" name="setUp" finished-at="2024-12-31T15:22:53 IST" duration-ms="18398" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Resource.BaseTest@7526515b]" started-at="2025-01-07T13:51:36 IST" name="setUp" finished-at="2025-01-07T13:51:52 IST" duration-ms="15971" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="quitPlaywright()[pri:0, instance:Resource.BaseTest@7526515b]" started-at="2024-12-31T15:24:01 IST" name="quitPlaywright" finished-at="2024-12-31T15:24:03 IST" duration-ms="1429" status="PASS">
+        <test-method is-config="true" signature="quitPlaywright()[pri:0, instance:Resource.BaseTest@7526515b]" started-at="2025-01-07T13:53:59 IST" name="quitPlaywright" finished-at="2025-01-07T13:54:01 IST" duration-ms="1098" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitPlaywright -->
       </class> <!-- Resource.BaseTest -->
       <class name="com.SignUP">
-        <test-method signature="Sign_Up_with_Valid_Credentials()[pri:1, instance:com.SignUP@7674f035]" started-at="2024-12-31T15:22:53 IST" name="Sign_Up_with_Valid_Credentials" finished-at="2024-12-31T15:23:10 IST" duration-ms="17340" status="PASS">
+        <test-method signature="Sign_Up_with_Valid_Credentials()[pri:1, instance:com.SignUP@7674f035]" started-at="2025-01-07T13:51:52 IST" name="Sign_Up_with_Valid_Credentials" finished-at="2025-01-07T13:52:08 IST" duration-ms="16325" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Sign_Up_with_Valid_Credentials -->
-        <test-method signature="Sign_Up_with_an_already_Registered_Email()[pri:2, instance:com.SignUP@7674f035]" started-at="2024-12-31T15:23:10 IST" name="Sign_Up_with_an_already_Registered_Email" finished-at="2024-12-31T15:23:16 IST" duration-ms="6027" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Sign_Up_with_an_already_Registered_Email -->
-        <test-method signature="SignUp_with_an_Invalid_EmailID()[pri:3, instance:com.SignUP@7674f035]" started-at="2024-12-31T15:23:16 IST" name="SignUp_with_an_Invalid_EmailID" finished-at="2024-12-31T15:23:19 IST" duration-ms="2863" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SignUp_with_an_Invalid_EmailID -->
-        <test-method signature="SignUp_with_Password_ConfirmPassword_Missmatch()[pri:4, instance:com.SignUP@7674f035]" started-at="2024-12-31T15:23:19 IST" name="SignUp_with_Password_ConfirmPassword_Missmatch" finished-at="2024-12-31T15:23:51 IST" duration-ms="31861" status="FAIL">
+        <test-method signature="Sign_Up_with_an_already_Registered_Email()[pri:2, instance:com.SignUP@7674f035]" started-at="2025-01-07T13:52:08 IST" name="Sign_Up_with_an_already_Registered_Email" finished-at="2025-01-07T13:53:32 IST" duration-ms="84269" status="FAIL">
           <exception class="com.microsoft.playwright.TimeoutError">
             <message>
               <![CDATA[Error {
-  message='Timeout 30000ms exceeded.
+  message='Timeout 80000ms exceeded.
   name='TimeoutError
-  stack='TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\progress.js:75:26)
-    at Frame.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\frames.js:1072:23)
-    at FrameDispatcher.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\dispatchers\frameDispatcher.js:170:30)
-    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\dispatchers\dispatcher.js:361:39)
+  stack='TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\progress.js:75:26)
+    at Frame.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\frames.js:1072:23)
+    at FrameDispatcher.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\dispatchers\frameDispatcher.js:170:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\dispatchers\dispatcher.js:361:39)
 }
 Call log:
 -   - waiting for getByPlaceholder("Email Address")
--     - waiting for" https://awspf.com/" navigation to finish...
+-     - waiting for navigation to finish...
 -     - navigated to "https://awspf.com/"
 ]]>
             </message>
             <full-stacktrace>
               <![CDATA[com.microsoft.playwright.TimeoutError: Error {
-  message='Timeout 30000ms exceeded.
+  message='Timeout 80000ms exceeded.
   name='TimeoutError
-  stack='TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\progress.js:75:26)
-    at Frame.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\frames.js:1072:23)
-    at FrameDispatcher.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\dispatchers\frameDispatcher.js:170:30)
-    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\dispatchers\dispatcher.js:361:39)
+  stack='TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\progress.js:75:26)
+    at Frame.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\frames.js:1072:23)
+    at FrameDispatcher.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\dispatchers\frameDispatcher.js:170:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\dispatchers\dispatcher.js:361:39)
 }
 Call log:
 -   - waiting for getByPlaceholder("Email Address")
--     - waiting for" https://awspf.com/" navigation to finish...
+-     - waiting for navigation to finish...
 -     - navigated to "https://awspf.com/"
 
 at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
@@ -77,7 +69,7 @@ at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:
 at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:325)
 at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:250)
 at com.microsoft.playwright.Locator.fill(Locator.java:3075)
-at com.SignUP.SignUp_with_Password_ConfirmPassword_Missmatch(SignUP.java:79)
+at com.SignUP.Sign_Up_with_an_already_Registered_Email(SignUP.java:52)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -111,18 +103,18 @@ at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 Caused by: com.microsoft.playwright.TimeoutError: Error {
-  message='Timeout 30000ms exceeded.
+  message='Timeout 80000ms exceeded.
   name='TimeoutError
-  stack='TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\progress.js:75:26)
-    at Frame.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\frames.js:1072:23)
-    at FrameDispatcher.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\dispatchers\frameDispatcher.js:170:30)
-    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-4153218117083134374\package\lib\server\dispatchers\dispatcher.js:361:39)
+  stack='TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\progress.js:75:26)
+    at Frame.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\frames.js:1072:23)
+    at FrameDispatcher.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\dispatchers\frameDispatcher.js:170:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-11136382032014808416\package\lib\server\dispatchers\dispatcher.js:361:39)
 }
 Call log:
 -   - waiting for getByPlaceholder("Email Address")
--     - waiting for" https://awspf.com/" navigation to finish...
+-     - waiting for navigation to finish...
 -     - navigated to "https://awspf.com/"
 
 at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
@@ -134,16 +126,24 @@ at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
           </exception> <!-- com.microsoft.playwright.TimeoutError -->
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- Sign_Up_with_an_already_Registered_Email -->
+        <test-method signature="SignUp_with_an_Invalid_EmailID()[pri:3, instance:com.SignUP@7674f035]" started-at="2025-01-07T13:53:33 IST" name="SignUp_with_an_Invalid_EmailID" finished-at="2025-01-07T13:53:38 IST" duration-ms="5391" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignUp_with_an_Invalid_EmailID -->
+        <test-method signature="SignUp_with_Password_ConfirmPassword_Missmatch()[pri:4, instance:com.SignUP@7674f035]" started-at="2025-01-07T13:53:38 IST" name="SignUp_with_Password_ConfirmPassword_Missmatch" finished-at="2025-01-07T13:53:43 IST" duration-ms="5113" status="PASS">
+          <reporter-output>
+          </reporter-output>
         </test-method> <!-- SignUp_with_Password_ConfirmPassword_Missmatch -->
-        <test-method signature="SignUp_with_a_Password_Less_Than_6_Characters()[pri:5, instance:com.SignUP@7674f035]" started-at="2024-12-31T15:23:51 IST" name="SignUp_with_a_Password_Less_Than_6_Characters" finished-at="2024-12-31T15:23:54 IST" duration-ms="2847" status="PASS">
+        <test-method signature="SignUp_with_a_Password_Less_Than_6_Characters()[pri:5, instance:com.SignUP@7674f035]" started-at="2025-01-07T13:53:43 IST" name="SignUp_with_a_Password_Less_Than_6_Characters" finished-at="2025-01-07T13:53:49 IST" duration-ms="5408" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignUp_with_a_Password_Less_Than_6_Characters -->
-        <test-method signature="SignUp_with_an_Email_Containing_Invalid_Characters_Space()[pri:6, instance:com.SignUP@7674f035]" started-at="2024-12-31T15:23:54 IST" name="SignUp_with_an_Email_Containing_Invalid_Characters_Space" finished-at="2024-12-31T15:23:57 IST" duration-ms="2772" status="PASS">
+        <test-method signature="SignUp_with_an_Email_Containing_Invalid_Characters_Space()[pri:6, instance:com.SignUP@7674f035]" started-at="2025-01-07T13:53:49 IST" name="SignUp_with_an_Email_Containing_Invalid_Characters_Space" finished-at="2025-01-07T13:53:53 IST" duration-ms="4823" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignUp_with_an_Email_Containing_Invalid_Characters_Space -->
-        <test-method signature="SignUp_with_an_Password_Containing_Invalid_Characters_Space()[pri:7, instance:com.SignUP@7674f035]" started-at="2024-12-31T15:23:57 IST" name="SignUp_with_an_Password_Containing_Invalid_Characters_Space" finished-at="2024-12-31T15:24:00 IST" duration-ms="3128" status="PASS">
+        <test-method signature="SignUp_with_an_Password_Containing_Invalid_Characters_Space()[pri:7, instance:com.SignUP@7674f035]" started-at="2025-01-07T13:53:53 IST" name="SignUp_with_an_Password_Containing_Invalid_Characters_Space" finished-at="2025-01-07T13:53:59 IST" duration-ms="5200" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignUp_with_an_Password_Containing_Invalid_Characters_Space -->
