@@ -33,6 +33,7 @@ public class SignUP extends BaseTest {
 		 String ExpectedTitle= "Login – PlayFactile"; 
 		 page.waitForNavigation(() -> 
 		 page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")));
+		 page.reload();
 		 Thread.sleep(2000);		
 		assertEquals(page.title(), ExpectedTitle, "Login page is not appearing, after deleting newly created account");
 	}
