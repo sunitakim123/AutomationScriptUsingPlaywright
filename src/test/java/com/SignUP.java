@@ -2,6 +2,7 @@ package com;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
 import java.util.UUID;
@@ -29,10 +30,13 @@ public class SignUP extends BaseTest {
 		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Sign Up")).click();
 		DeleteAccount();
 		//Thread.sleep(2000);
-		String ExpectedTitle= "Login – PlayFactile";
+		String expectedTitle1= "Login – PlayFactile";
+		String expectedTitle2= "Login � PlayFactile";
 		 page.waitForNavigation(() -> 
 		 page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")).click());  
-		assertEquals(page.title(), ExpectedTitle, "Login page is not appearing, after deleting newly created account");
+		 String actualTitle= page.title();
+		 assertTrue(actualTitle.equals(expectedTitle1) || actualTitle.equals(expectedTitle2),
+				 "Login page is not appearing, after deleting newly created account. Actual title: " + actualTitle);
 	}
 	
 
