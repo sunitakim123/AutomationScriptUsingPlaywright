@@ -38,6 +38,7 @@ public class Login extends BaseTest {
 	
 	@Test(priority=2)
 	public void Login_with_valid_emailAndpassword() throws IOException, InterruptedException {
+		Thread.sleep(2000);
 		  page.navigate(properties.getProperty("rootUrl"));
 		  page.waitForNavigation(() -> 
 	      page.locator("//*[@id=\"gatsby-focus-wrapper\"]/div/main/section[1]/div/div/div[1]/div/div[1]/a[2]").click());
@@ -52,6 +53,7 @@ Logout();
 	
 	@Test(priority=3)
 	public void Login_with_Invalid_username() throws IOException, InterruptedException {
+		Thread.sleep(2000);
 		  page.navigate(properties.getProperty("rootUrl"));
 		  page.waitForNavigation(() -> 
 	      page.locator("//*[@id=\"gatsby-focus-wrapper\"]/div/main/section[1]/div/div/div[1]/div/div[1]/a[2]").click());
@@ -70,6 +72,7 @@ Logout();
 	
 	@Test(priority=4)
 	public void Login_with_Invalid_Gmail() throws IOException, InterruptedException {
+		Thread.sleep(2000);
 		  page.navigate(properties.getProperty("rootUrl"));
 		  page.waitForNavigation(() -> 
 	      page.locator("//*[@id=\"gatsby-focus-wrapper\"]/div/main/section[1]/div/div/div[1]/div/div[1]/a[2]").click());
@@ -87,6 +90,7 @@ Logout();
 
 	@Test(priority=5)
 	public void Login_with_Invalid_Password() throws IOException, InterruptedException {
+		Thread.sleep(2000);
 		  page.navigate(properties.getProperty("rootUrl"));
 		  page.waitForNavigation(() -> 
 	      page.locator("//*[@id=\"gatsby-focus-wrapper\"]/div/main/section[1]/div/div/div[1]/div/div[1]/a[2]").click());
