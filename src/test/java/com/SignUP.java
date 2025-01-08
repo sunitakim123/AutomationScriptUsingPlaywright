@@ -28,12 +28,12 @@ public class SignUP extends BaseTest {
 		page.getByPlaceholder("Password", new Page.GetByPlaceholderOptions().setExact(true)).fill("ValidPass123");
 		page.getByPlaceholder("Confirm Password").fill("ValidPass123");
 		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Sign Up")).click();
-		DeleteAccount();
-		//Thread.sleep(2000);
-		String expectedTitle1= "Login – PlayFactile";
-		String expectedTitle2= "Login � PlayFactile";
+		DeleteAccount();		
+		Thread.sleep(2000);		
 		 page.waitForNavigation(() -> 
-		 page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")).click());  
+		 page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In"))); 
+		 String expectedTitle1= "Login – PlayFactile";
+		 String expectedTitle2= "Login � PlayFactile";
 		 String actualTitle= page.title();
 		 assertTrue(actualTitle.equals(expectedTitle1) || actualTitle.equals(expectedTitle2),
 				 "Login page is not appearing, after deleting newly created account. Actual title: " + actualTitle);

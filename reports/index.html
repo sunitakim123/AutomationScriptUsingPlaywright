@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">PlayFactile Automation TestCases Result</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 8, 2025 12:29:41 pm</span></a>
+<a href="#"><span class="badge badge-primary">Jan 8, 2025 01:08:09 pm</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,11 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -67,6 +72,7 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -74,39 +80,77 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Sign_Up_with_Valid_Credentials</p>
             <p class="text-sm">
-              <span>12:29:55 pm</span> / <span>00:00:11:171</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>1:08:20 pm</span> / <span>00:00:08:404</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Sign_Up_with_Valid_Credentials</h5>
-<span class='badge badge-success'>01.08.2025 12:29:55 pm</span>
-<span class='badge badge-danger'>01.08.2025 12:30:06 pm</span>
-<span class='badge badge-default'>00:00:11:171</span>
+<h5 class="test-status text-fail">Sign_Up_with_Valid_Credentials</h5>
+<span class='badge badge-success'>01.08.2025 1:08:20 pm</span>
+<span class='badge badge-danger'>01.08.2025 1:08:29 pm</span>
+<span class='badge badge-default'>00:00:08:404</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\DELL\eclipse-workspace\Ram\AutomationUsingPlaywright\reports\Sign_Up_with_Valid_Credentials.png' src="C:\Users\DELL\eclipse-workspace\Ram\AutomationUsingPlaywright\reports\Sign_Up_with_Valid_Credentials.png">
+    <div class="title">Sign_Up_with_Valid_Credentials</div>
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:30:06 pm</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>1:08:28 pm</td>
         <td>
-          Test Passed
+          <textarea readonly class="code-block">java.lang.AssertionError: Login page is not appearing, after deleting newly created account. Actual title: Classroom Jeopardy Review Game | Buzzer Mode | Factile expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at com.SignUP.Sign_Up_with_Valid_Credentials(SignUP.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -121,7 +165,7 @@
           <div class="test-detail">
             <p class="name">Sign_Up_with_an_already_Registered_Email</p>
             <p class="text-sm">
-              <span>12:30:06 pm</span> / <span>00:00:03:929</span>
+              <span>1:08:29 pm</span> / <span>00:00:03:520</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -130,9 +174,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Sign_Up_with_an_already_Registered_Email</h5>
-<span class='badge badge-success'>01.08.2025 12:30:06 pm</span>
-<span class='badge badge-danger'>01.08.2025 12:30:10 pm</span>
-<span class='badge badge-default'>00:00:03:929</span>
+<span class='badge badge-success'>01.08.2025 1:08:29 pm</span>
+<span class='badge badge-danger'>01.08.2025 1:08:32 pm</span>
+<span class='badge badge-default'>00:00:03:520</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -144,7 +188,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:30:10 pm</td>
+        <td>1:08:32 pm</td>
         <td>
           Test Passed
         </td>
@@ -161,7 +205,7 @@
           <div class="test-detail">
             <p class="name">SignUp_with_an_Invalid_EmailID</p>
             <p class="text-sm">
-              <span>12:30:10 pm</span> / <span>00:00:01:609</span>
+              <span>1:08:32 pm</span> / <span>00:00:02:092</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -170,9 +214,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">SignUp_with_an_Invalid_EmailID</h5>
-<span class='badge badge-success'>01.08.2025 12:30:10 pm</span>
-<span class='badge badge-danger'>01.08.2025 12:30:12 pm</span>
-<span class='badge badge-default'>00:00:01:609</span>
+<span class='badge badge-success'>01.08.2025 1:08:32 pm</span>
+<span class='badge badge-danger'>01.08.2025 1:08:34 pm</span>
+<span class='badge badge-default'>00:00:02:092</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -184,7 +228,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:30:12 pm</td>
+        <td>1:08:34 pm</td>
         <td>
           Test Passed
         </td>
@@ -201,7 +245,7 @@
           <div class="test-detail">
             <p class="name">SignUp_with_Password_ConfirmPassword_Missmatch</p>
             <p class="text-sm">
-              <span>12:30:12 pm</span> / <span>00:00:01:456</span>
+              <span>1:08:34 pm</span> / <span>00:00:01:406</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -210,9 +254,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">SignUp_with_Password_ConfirmPassword_Missmatch</h5>
-<span class='badge badge-success'>01.08.2025 12:30:12 pm</span>
-<span class='badge badge-danger'>01.08.2025 12:30:13 pm</span>
-<span class='badge badge-default'>00:00:01:456</span>
+<span class='badge badge-success'>01.08.2025 1:08:34 pm</span>
+<span class='badge badge-danger'>01.08.2025 1:08:36 pm</span>
+<span class='badge badge-default'>00:00:01:406</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -224,7 +268,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:30:13 pm</td>
+        <td>1:08:36 pm</td>
         <td>
           Test Passed
         </td>
@@ -241,7 +285,7 @@
           <div class="test-detail">
             <p class="name">SignUp_with_a_Password_Less_Than_6_Characters</p>
             <p class="text-sm">
-              <span>12:30:13 pm</span> / <span>00:00:01:426</span>
+              <span>1:08:36 pm</span> / <span>00:00:01:453</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -250,9 +294,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">SignUp_with_a_Password_Less_Than_6_Characters</h5>
-<span class='badge badge-success'>01.08.2025 12:30:13 pm</span>
-<span class='badge badge-danger'>01.08.2025 12:30:15 pm</span>
-<span class='badge badge-default'>00:00:01:426</span>
+<span class='badge badge-success'>01.08.2025 1:08:36 pm</span>
+<span class='badge badge-danger'>01.08.2025 1:08:37 pm</span>
+<span class='badge badge-default'>00:00:01:453</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -264,7 +308,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:30:15 pm</td>
+        <td>1:08:37 pm</td>
         <td>
           Test Passed
         </td>
@@ -281,7 +325,7 @@
           <div class="test-detail">
             <p class="name">SignUp_with_an_Email_Containing_Invalid_Characters_Space</p>
             <p class="text-sm">
-              <span>12:30:15 pm</span> / <span>00:00:01:523</span>
+              <span>1:08:37 pm</span> / <span>00:00:01:388</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -290,9 +334,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">SignUp_with_an_Email_Containing_Invalid_Characters_Space</h5>
-<span class='badge badge-success'>01.08.2025 12:30:15 pm</span>
-<span class='badge badge-danger'>01.08.2025 12:30:16 pm</span>
-<span class='badge badge-default'>00:00:01:523</span>
+<span class='badge badge-success'>01.08.2025 1:08:37 pm</span>
+<span class='badge badge-danger'>01.08.2025 1:08:38 pm</span>
+<span class='badge badge-default'>00:00:01:388</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -304,7 +348,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:30:16 pm</td>
+        <td>1:08:38 pm</td>
         <td>
           Test Passed
         </td>
@@ -321,7 +365,7 @@
           <div class="test-detail">
             <p class="name">SignUp_with_an_Password_Containing_Invalid_Characters_Space</p>
             <p class="text-sm">
-              <span>12:30:16 pm</span> / <span>00:00:01:659</span>
+              <span>1:08:38 pm</span> / <span>00:00:01:969</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -330,9 +374,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">SignUp_with_an_Password_Containing_Invalid_Characters_Space</h5>
-<span class='badge badge-success'>01.08.2025 12:30:16 pm</span>
-<span class='badge badge-danger'>01.08.2025 12:30:18 pm</span>
-<span class='badge badge-default'>00:00:01:659</span>
+<span class='badge badge-success'>01.08.2025 1:08:38 pm</span>
+<span class='badge badge-danger'>01.08.2025 1:08:40 pm</span>
+<span class='badge badge-default'>00:00:01:969</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -344,7 +388,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:30:18 pm</td>
+        <td>1:08:40 pm</td>
         <td>
           Test Passed
         </td>
@@ -361,7 +405,7 @@
           <div class="test-detail">
             <p class="name">Login_with_valid_usernameAndpassword</p>
             <p class="text-sm">
-              <span>12:30:18 pm</span> / <span>00:00:02:278</span>
+              <span>1:08:40 pm</span> / <span>00:00:02:560</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -370,9 +414,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Login_with_valid_usernameAndpassword</h5>
-<span class='badge badge-success'>01.08.2025 12:30:18 pm</span>
-<span class='badge badge-danger'>01.08.2025 12:30:20 pm</span>
-<span class='badge badge-default'>00:00:02:278</span>
+<span class='badge badge-success'>01.08.2025 1:08:40 pm</span>
+<span class='badge badge-danger'>01.08.2025 1:08:43 pm</span>
+<span class='badge badge-default'>00:00:02:560</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -384,7 +428,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:30:20 pm</td>
+        <td>1:08:43 pm</td>
         <td>
           Test Passed
         </td>
@@ -401,7 +445,7 @@
           <div class="test-detail">
             <p class="name">Login_with_valid_emailAndpassword</p>
             <p class="text-sm">
-              <span>12:30:20 pm</span> / <span>00:00:04:376</span>
+              <span>1:08:43 pm</span> / <span>00:00:04:214</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -410,9 +454,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Login_with_valid_emailAndpassword</h5>
-<span class='badge badge-success'>01.08.2025 12:30:20 pm</span>
-<span class='badge badge-danger'>01.08.2025 12:30:24 pm</span>
-<span class='badge badge-default'>00:00:04:376</span>
+<span class='badge badge-success'>01.08.2025 1:08:43 pm</span>
+<span class='badge badge-danger'>01.08.2025 1:08:47 pm</span>
+<span class='badge badge-default'>00:00:04:214</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -424,7 +468,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:30:24 pm</td>
+        <td>1:08:47 pm</td>
         <td>
           Test Passed
         </td>
@@ -441,7 +485,7 @@
           <div class="test-detail">
             <p class="name">Login_with_Invalid_username</p>
             <p class="text-sm">
-              <span>12:30:24 pm</span> / <span>00:00:05:525</span>
+              <span>1:08:47 pm</span> / <span>00:00:05:488</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -450,9 +494,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Login_with_Invalid_username</h5>
-<span class='badge badge-success'>01.08.2025 12:30:24 pm</span>
-<span class='badge badge-danger'>01.08.2025 12:30:30 pm</span>
-<span class='badge badge-default'>00:00:05:525</span>
+<span class='badge badge-success'>01.08.2025 1:08:47 pm</span>
+<span class='badge badge-danger'>01.08.2025 1:08:53 pm</span>
+<span class='badge badge-default'>00:00:05:488</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -464,7 +508,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:30:30 pm</td>
+        <td>1:08:53 pm</td>
         <td>
           Test Passed
         </td>
@@ -481,7 +525,7 @@
           <div class="test-detail">
             <p class="name">Login_with_Invalid_Gmail</p>
             <p class="text-sm">
-              <span>12:30:30 pm</span> / <span>00:00:05:485</span>
+              <span>1:08:53 pm</span> / <span>00:00:05:502</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -490,9 +534,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Login_with_Invalid_Gmail</h5>
-<span class='badge badge-success'>01.08.2025 12:30:30 pm</span>
-<span class='badge badge-danger'>01.08.2025 12:30:35 pm</span>
-<span class='badge badge-default'>00:00:05:485</span>
+<span class='badge badge-success'>01.08.2025 1:08:53 pm</span>
+<span class='badge badge-danger'>01.08.2025 1:08:58 pm</span>
+<span class='badge badge-default'>00:00:05:502</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -504,7 +548,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:30:35 pm</td>
+        <td>1:08:58 pm</td>
         <td>
           Test Passed
         </td>
@@ -521,7 +565,7 @@
           <div class="test-detail">
             <p class="name">Login_with_Invalid_Password</p>
             <p class="text-sm">
-              <span>12:30:35 pm</span> / <span>00:00:06:267</span>
+              <span>1:08:58 pm</span> / <span>00:00:05:604</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -530,9 +574,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Login_with_Invalid_Password</h5>
-<span class='badge badge-success'>01.08.2025 12:30:35 pm</span>
-<span class='badge badge-danger'>01.08.2025 12:30:42 pm</span>
-<span class='badge badge-default'>00:00:06:267</span>
+<span class='badge badge-success'>01.08.2025 1:08:58 pm</span>
+<span class='badge badge-danger'>01.08.2025 1:09:04 pm</span>
+<span class='badge badge-default'>00:00:05:604</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -544,7 +588,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:30:42 pm</td>
+        <td>1:09:04 pm</td>
         <td>
           Test Passed
         </td>
@@ -563,30 +607,79 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="container-fluid p-4 view dashboard-view">
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:08:20 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>Sign_Up_with_Valid_Credentials</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 8, 2025 12:29:41 pm</h3>
+<h3>Jan 8, 2025 01:08:09 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 8, 2025 12:30:42 pm</h3>
+<h3>Jan 8, 2025 01:09:04 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>12</h3>
+<h3>11</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -602,12 +695,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>12</b> tests passed
+<div><small data-tooltip='91%'>
+<b>11</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='8%'><b>1</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -625,9 +718,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>12</b> events passed</small></div>
+<div><small data-tooltip='91%'><b>11</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
+<small data-tooltip='8%'><b>1</b> events failed,
 <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -644,7 +737,7 @@
 </div></div>
 <script>
 var timeline = {
-"Sign_Up_with_Valid_Credentials":11.171,"Sign_Up_with_an_already_Registered_Email":3.929,"SignUp_with_an_Invalid_EmailID":1.609,"SignUp_with_Password_ConfirmPassword_Missmatch":1.456,"SignUp_with_a_Password_Less_Than_6_Characters":1.426,"SignUp_with_an_Email_Containing_Invalid_Characters_Space":1.523,"SignUp_with_an_Password_Containing_Invalid_Characters_Space":1.659,"Login_with_valid_usernameAndpassword":2.278,"Login_with_valid_emailAndpassword":4.376,"Login_with_Invalid_username":5.525,"Login_with_Invalid_Gmail":5.485,"Login_with_Invalid_Password":6.267
+"Sign_Up_with_Valid_Credentials":8.404,"Sign_Up_with_an_already_Registered_Email":3.52,"SignUp_with_an_Invalid_EmailID":2.092,"SignUp_with_Password_ConfirmPassword_Missmatch":1.406,"SignUp_with_a_Password_Less_Than_6_Characters":1.453,"SignUp_with_an_Email_Containing_Invalid_Characters_Space":1.388,"SignUp_with_an_Password_Containing_Invalid_Characters_Space":1.969,"Login_with_valid_usernameAndpassword":2.56,"Login_with_valid_emailAndpassword":4.214,"Login_with_Invalid_username":5.488,"Login_with_Invalid_Gmail":5.502,"Login_with_Invalid_Password":5.604
 };
 </script>
 <div class="row">
@@ -667,8 +760,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 12,
-failParent: 0,
+passParent: 11,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -684,8 +777,8 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 12,
-failEvents: 0,
+passEvents: 11,
+failEvents: 1,
 warningEvents: 0,
 skipEvents: 0,
 infoEvents: 0
