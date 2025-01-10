@@ -5,9 +5,8 @@
     <classes>
       <class name="com.GamePlayByFreeUsers">
         <methods>
+          <include name="test_Free_User_Create_Game_Using_AI"/>
           <include name="test_Free_User_Play_AIGenerated_Game"/>
-          <include name="test_Free_User_Creates_Game_Using_AI"/>
-          <include name="test_Public_Game_Played_By_Logged_User_Who_having_Free_account"/>
           <include name="setUp"/>
           <include name="quitPlaywright"/>
         </methods>
