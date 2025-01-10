@@ -3,19 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.SignUP">
+      <class name="com.GamePlayByFreeUsers">
         <methods>
-          <include name="SignUp_with_an_Invalid_EmailID"/>
-          <include name="SignUp_with_an_Password_Containing_Invalid_Characters_Space"/>
-          <include name="SignUp_with_an_Email_Containing_Invalid_Characters_Space"/>
-          <include name="Sign_Up_with_Valid_Credentials"/>
+          <include name="test_Free_User_Play_AIGenerated_Game"/>
+          <include name="test_Free_User_Creates_Game_Using_AI"/>
+          <include name="test_Public_Game_Played_By_Logged_User_Who_having_Free_account"/>
           <include name="setUp"/>
-          <include name="SignUp_with_a_Password_Less_Than_6_Characters"/>
           <include name="quitPlaywright"/>
-          <include name="Sign_Up_with_an_already_Registered_Email"/>
-          <include name="SignUp_with_Password_ConfirmPassword_Missmatch"/>
         </methods>
-      </class> <!-- com.SignUP -->
+      </class> <!-- com.GamePlayByFreeUsers -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

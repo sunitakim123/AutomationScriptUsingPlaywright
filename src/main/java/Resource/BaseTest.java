@@ -16,6 +16,7 @@ import java.util.Properties;
 		protected static Browser browser;
 	    protected static BrowserContext context;
 	    protected static Page page;
+	    protected static Page page1;
 	    protected static Properties properties;
 	    protected static Playwright playwright;
 	   // protected  static Properties config = new Properties();
@@ -39,7 +40,10 @@ import java.util.Properties;
 	        } else if (browserType.equalsIgnoreCase("webkit")) {
 	            browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
 	        } else {
-	            browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
+	           // for linux
+	        	//browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
+	        	//for window
+	        	browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
 	        }
 	        
 	        
@@ -66,7 +70,7 @@ import java.util.Properties;
 		}
 		 public  String takeScreenshot(String testcaseName)
 		    {
-		    	String path = System.getProperty("user.dir") + "\\reports\\" + testcaseName + ".png";
+		    	String path = System.getProperty("user.dir") + "/reports/" + testcaseName + ".png";
 		    	page.screenshot(new Page.ScreenshotOptions()
 		    			.setPath(Paths.get(path))
 		    			.setFullPage(true));
