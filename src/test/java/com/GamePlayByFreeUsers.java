@@ -197,7 +197,7 @@ import com.microsoft.playwright.Page;
 
 	
 	
-	@Test(enabled=false)
+	@Test(priority=2)
 	public void test_Public_Game_Played_By_Logged_User_Who_having_Free_account() throws IOException, InterruptedException {
 		page.navigate(properties.getProperty("rootUrl"));
 		  page.waitForNavigation(() -> 
@@ -351,7 +351,7 @@ import com.microsoft.playwright.Page;
 
 	
 	
-	@Test(enabled=false)
+	@Test(priority=3)
 	public void test_Free_User_Create_Game_Using_AI() throws IOException, InterruptedException {
 		   page.navigate(properties.getProperty("rootUrl"));
 		  
