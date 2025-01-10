@@ -214,7 +214,7 @@ import com.microsoft.playwright.Page;
 	      page.locator("form").getByRole(AriaRole.BUTTON).first().click();
 	      Page page1 = page.waitForPopup(() -> {
 	        page.locator("div:nth-child(3) > .game-card-template__footer > .game-card-footer > a").click();
-	      });
+	      });Thread.sleep(3000);
 	      page1.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Factile Jeopardy-style    ")).click();
 	      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("5").setExact(true)).click();
 	      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("No")).click();
@@ -356,6 +356,7 @@ import com.microsoft.playwright.Page;
 		   page.navigate(properties.getProperty("rootUrl"));
 		  
 	        page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Sign Up Sign Up For Free")).click();
+	        Thread.sleep(3000);
 	        page.waitForNavigation(() -> 
 	        page.getByPlaceholder("Email Address").fill("sunita.del1@gmail.com"));
 	       // System.out.println("email:-"+generateRandomEmail());
@@ -449,7 +450,7 @@ import com.microsoft.playwright.Page;
 	      
 	     
 	      @Test(dependsOnMethods = {"test_Free_User_Create_Game_Using_AI"})
-	      public void test_Free_User_Play_AIGenerated_Game()
+	      public void test_Free_User_Play_AIGenerated_Game() throws InterruptedException
 	      {
 	      Page page1 = page.waitForPopup(() -> {
 	        page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName(" Play Game")).click();
@@ -471,6 +472,7 @@ import com.microsoft.playwright.Page;
 	      page1.getByText("UPGRADE toPROGraduate from").click();
 	      assertThat(page1.getByRole(AriaRole.DIALOG)).containsText("UPGRADE toPROGraduate from your Basic plan");
 	      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Close")).click();
+	      Thread.sleep(3000);
 	      page1.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Factile Jeopardy-style    ")).click();
 	      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("5").setExact(true)).click();
 	      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("No")).click();
