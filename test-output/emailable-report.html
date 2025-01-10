@@ -9,12 +9,72 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">403,119</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">322,365</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">com.GamePlayByFreeUsers</td><td><a href="#m0">test_Free_User_Create_Game_Using_AI</a></td><td rowspan="1">1736513433241</td><td rowspan="1">82424</td></tr><tr class="passedeven"><td><a href="#m1">test_Free_User_Play_AIGenerated_Game</a></td><td rowspan="1">1736513515673</td><td rowspan="1">81894</td></tr><tr class="passedeven"><td><a href="#m2">test_Public_Game_Played_By_Logged_User_Who_having_Free_account</a></td><td rowspan="1">1736513312257</td><td rowspan="1">120981</td></tr><tr class="passedeven"><td><a href="#m3">test_Public_Game_Played_By_Non_Logged_User</a></td><td rowspan="1">1736513194491</td><td rowspan="1">117731</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.GamePlayByFreeUsers</td><td><a href="#m0">test_Free_User_Create_Game_Using_AI</a></td><td rowspan="1">1736514019555</td><td rowspan="1">84312</td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.GamePlayByFreeUsers</td><td><a href="#m1">test_Free_User_Play_AIGenerated_Game</a></td><td rowspan="1">1736514104415</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.GamePlayByFreeUsers</td><td><a href="#m2">test_Public_Game_Played_By_Logged_User_Who_having_Free_account</a></td><td rowspan="1">1736513899030</td><td rowspan="1">120518</td></tr><tr class="passedeven"><td><a href="#m3">test_Public_Game_Played_By_Non_Logged_User</a></td><td rowspan="1">1736513782113</td><td rowspan="1">116877</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.GamePlayByFreeUsers#test_Free_User_Create_Game_Using_AI</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.GamePlayByFreeUsers#test_Free_User_Play_AIGenerated_Game</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.GamePlayByFreeUsers#test_Free_User_Create_Game_Using_AI</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-1192399068629375941\package\lib\server\progress.js:75:26)
+    at Frame.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-1192399068629375941\package\lib\server\frames.js:1072:23)
+    at FrameDispatcher.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-1192399068629375941\package\lib\server\dispatchers\frameDispatcher.js:170:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-1192399068629375941\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-1192399068629375941\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByPlaceholder(&quot;Email Address&quot;)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:335)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$fill$14(FrameImpl.java:325)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:325)
+	at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:250)
+	at com.microsoft.playwright.Locator.fill(Locator.java:3075)
+	at com.GamePlayByFreeUsers.lambda$5(GamePlayByFreeUsers.java:361)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:128)
+	at com.microsoft.playwright.impl.FrameImpl.waitForNavigationImpl(FrameImpl.java:1041)
+	at com.microsoft.playwright.impl.FrameImpl.waitForNavigationImpl(FrameImpl.java:1021)
+	at com.microsoft.playwright.impl.PageImpl.waitForNavigationImpl(PageImpl.java:1459)
+	at com.microsoft.playwright.impl.PageImpl.lambda$waitForNavigation$89(PageImpl.java:1449)
+	at com.microsoft.playwright.impl.WaitForEventLogger.lambda$get$0(WaitForEventLogger.java:50)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.WaitForEventLogger.get(WaitForEventLogger.java:41)
+	at com.microsoft.playwright.impl.ChannelOwner.withWaitLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.PageImpl.waitForNavigation(PageImpl.java:1449)
+	at com.microsoft.playwright.Page.waitForNavigation(Page.java:7877)
+	at com.GamePlayByFreeUsers.test_Free_User_Create_Game_Using_AI(GamePlayByFreeUsers.java:360)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-1192399068629375941\package\lib\server\progress.js:75:26)
+    at Frame.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-1192399068629375941\package\lib\server\frames.js:1072:23)
+    at FrameDispatcher.fill (C:\Users\DELL\AppData\Local\Temp\playwright-java-1192399068629375941\package\lib\server\dispatchers\frameDispatcher.js:170:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-1192399068629375941\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-1192399068629375941\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByPlaceholder(&quot;Email Address&quot;)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 53 more
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.GamePlayByFreeUsers#test_Free_User_Play_AIGenerated_Game</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method GamePlayByFreeUsers.test_Free_User_Play_AIGenerated_Game()[pri:0, instance:com.GamePlayByFreeUsers@1caa0244] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">com.GamePlayByFreeUsers#test_Public_Game_Played_By_Logged_User_Who_having_Free_account</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m3">com.GamePlayByFreeUsers#test_Public_Game_Played_By_Non_Logged_User</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
