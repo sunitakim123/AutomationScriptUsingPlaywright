@@ -48,7 +48,7 @@ import com.microsoft.playwright.Page;
 		      page1.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^Memory Tile Matching Memory Board$"))).nth(2).click();
 		      assertThat(page1.getByText("UPGRADE toPROGraduate from")).isVisible();
 		      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Close")).click();
-		      Thread.sleep(3000);
+		      
 		      page1.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Factile Jeopardy-style    ")).click();
 		      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("6").setExact(true)).click();
 		      assertThat(page1.getByRole(AriaRole.HEADING, new Page.GetByRoleOptions().setName("Do you want to select more no"))).isVisible();

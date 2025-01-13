@@ -41,9 +41,9 @@ import java.util.Properties;
 	            browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
 	        } else {
 	           // for linux
-	        	browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
+	        	//browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
 	        	//for window
-	        	//browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+	        	browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
 	        }
 	        
 	        
