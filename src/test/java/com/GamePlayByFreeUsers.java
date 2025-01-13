@@ -358,7 +358,7 @@ import com.microsoft.playwright.Page;
 	        page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Sign Up Sign Up For Free")).click();
 	        Thread.sleep(3000);
 	        page.waitForNavigation(() -> 
-	        page.getByPlaceholder("Email Address").fill("sunita.del1@gmail.com"));
+	        page.getByPlaceholder("Email Address").fill("sunita.del2@gmail.com"));
 	       // System.out.println("email:-"+generateRandomEmail());
 			page.getByPlaceholder("Password", new Page.GetByPlaceholderOptions().setExact(true)).fill("123456");
 			page.getByPlaceholder("Confirm Password").fill("123456");
