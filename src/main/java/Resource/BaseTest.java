@@ -40,7 +40,8 @@ import java.util.Properties;
 	        } else if (browserType.equalsIgnoreCase("webkit")) {
 	            browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
 	        } else {
-	           // for linux
+	           // for linux, git branch  CodeForUbuntu
+	        	
 	        	browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
 	        	//for window
 	        	//browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
