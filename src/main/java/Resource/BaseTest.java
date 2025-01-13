@@ -35,18 +35,28 @@ import java.util.Properties;
 	         playwright = Playwright.create();
 	        String browserType = properties.getProperty("browser", "chromium"); // default to chromium
 
-	        if (browserType.equalsIgnoreCase("firefox")) {
+	      /*  if (browserType.equalsIgnoreCase("firefox")) {
 	            browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
 	        } else if (browserType.equalsIgnoreCase("webkit")) {
 	            browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
 	        } else {
-	           // for linux
-	        	//browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
+	         
 	        	//for window
 	        	browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
 	        }
 	        
-	        
+	        */
+	        String os = System.getProperty("os.name").toLowerCase();
+	        boolean isWindows = os.contains("win");
+
+	        if (browserType.equalsIgnoreCase("firefox")) {
+	            browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(isWindows ? false : true));
+	        } else if (browserType.equalsIgnoreCase("webkit")) {
+	            browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(isWindows ? false : true));
+	        } else {
+	            browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(isWindows ? false : true));
+	        }
+
 	        
 	        context = browser.newContext(new Browser.NewContextOptions().setViewportSize(1424, 1024));
 

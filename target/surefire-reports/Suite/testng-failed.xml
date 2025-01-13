@@ -6,13 +6,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
-      <class name="com.SignUP">
+      <class name="com.GamePlayByFreeUsers">
         <methods>
+          <include name="test_Free_User_Create_Game_Using_AI"/>
+          <include name="test_Free_User_Play_AIGenerated_Game"/>
           <include name="setUp"/>
           <include name="quitPlaywright"/>
-          <include name="Sign_Up_with_an_already_Registered_Email"/>
         </methods>
-      </class> <!-- com.SignUP -->
+      </class> <!-- com.GamePlayByFreeUsers -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

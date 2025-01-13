@@ -1,91 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-13T12:52:57 IST" name="Suite" finished-at="2025-01-13T13:00:24 IST" duration-ms="447409">
+  <suite started-at="2025-01-13T13:42:17 IST" name="Suite" finished-at="2025-01-13T13:49:07 IST" duration-ms="410198">
     <groups>
     </groups>
-    <test started-at="2025-01-13T12:52:57 IST" name="Test" finished-at="2025-01-13T13:00:24 IST" duration-ms="447409">
+    <test started-at="2025-01-13T13:42:17 IST" name="Test" finished-at="2025-01-13T13:49:07 IST" duration-ms="410198">
       <class name="Resource.BaseTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Resource.BaseTest@793f29ff]" started-at="2025-01-13T12:52:46 IST" name="setUp" finished-at="2025-01-13T12:52:57 IST" duration-ms="11505" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Resource.BaseTest@1ed4ae0f]" started-at="2025-01-13T13:42:06 IST" name="setUp" finished-at="2025-01-13T13:42:17 IST" duration-ms="10138" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="quitPlaywright()[pri:0, instance:Resource.BaseTest@793f29ff]" started-at="2025-01-13T13:00:25 IST" name="quitPlaywright" finished-at="2025-01-13T13:00:25 IST" duration-ms="492" status="PASS">
+        <test-method is-config="true" signature="quitPlaywright()[pri:0, instance:Resource.BaseTest@1ed4ae0f]" started-at="2025-01-13T13:49:07 IST" name="quitPlaywright" finished-at="2025-01-13T13:49:08 IST" duration-ms="504" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitPlaywright -->
       </class> <!-- Resource.BaseTest -->
       <class name="com.GamePlayByFreeUsers">
-        <test-method signature="test_Public_Game_Played_By_Non_Logged_User()[pri:1, instance:com.GamePlayByFreeUsers@548d708a]" started-at="2025-01-13T12:53:42 IST" name="test_Public_Game_Played_By_Non_Logged_User" finished-at="2025-01-13T12:55:34 IST" duration-ms="111526" status="PASS">
+        <test-method signature="test_Public_Game_Played_By_Non_Logged_User()[pri:1, instance:com.GamePlayByFreeUsers@25ce9dc4]" started-at="2025-01-13T13:42:17 IST" name="test_Public_Game_Played_By_Non_Logged_User" finished-at="2025-01-13T13:44:09 IST" duration-ms="112722" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_Public_Game_Played_By_Non_Logged_User -->
-        <test-method signature="test_Public_Game_Played_By_Logged_User_Who_having_Free_account()[pri:2, instance:com.GamePlayByFreeUsers@548d708a]" started-at="2025-01-13T12:55:34 IST" name="test_Public_Game_Played_By_Logged_User_Who_having_Free_account" finished-at="2025-01-13T12:57:31 IST" duration-ms="117456" status="PASS">
+        <test-method signature="test_Public_Game_Played_By_Logged_User_Who_having_Free_account()[pri:2, instance:com.GamePlayByFreeUsers@25ce9dc4]" started-at="2025-01-13T13:44:09 IST" name="test_Public_Game_Played_By_Logged_User_Who_having_Free_account" finished-at="2025-01-13T13:46:09 IST" duration-ms="119740" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_Public_Game_Played_By_Logged_User_Who_having_Free_account -->
-        <test-method signature="test_Free_User_Create_Game_Using_AI()[pri:3, instance:com.GamePlayByFreeUsers@548d708a]" started-at="2025-01-13T12:57:31 IST" name="test_Free_User_Create_Game_Using_AI" finished-at="2025-01-13T12:59:00 IST" duration-ms="88254" status="PASS">
+        <test-method signature="test_Free_User_Create_Game_Using_AI()[pri:3, instance:com.GamePlayByFreeUsers@25ce9dc4]" started-at="2025-01-13T13:46:09 IST" name="test_Free_User_Create_Game_Using_AI" finished-at="2025-01-13T13:47:43 IST" duration-ms="93403" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_Free_User_Create_Game_Using_AI -->
-        <test-method signature="test_Free_User_Play_AIGenerated_Game()[pri:0, instance:com.GamePlayByFreeUsers@548d708a]" started-at="2025-01-13T12:59:00 IST" name="test_Free_User_Play_AIGenerated_Game" finished-at="2025-01-13T13:00:24 IST" depends-on-methods="com.GamePlayByFreeUsers.test_Free_User_Create_Game_Using_AI" duration-ms="84844" status="PASS">
+        <test-method signature="test_Free_User_Play_AIGenerated_Game()[pri:0, instance:com.GamePlayByFreeUsers@25ce9dc4]" started-at="2025-01-13T13:47:43 IST" name="test_Free_User_Play_AIGenerated_Game" finished-at="2025-01-13T13:49:07 IST" depends-on-methods="com.GamePlayByFreeUsers.test_Free_User_Create_Game_Using_AI" duration-ms="84234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_Free_User_Play_AIGenerated_Game -->
       </class> <!-- com.GamePlayByFreeUsers -->
-      <class name="com.Login">
-        <test-method signature="Login_with_valid_usernameAndpassword()[pri:1, instance:com.Login@6bbe85a8]" started-at="2025-01-13T12:53:19 IST" name="Login_with_valid_usernameAndpassword" finished-at="2025-01-13T12:53:21 IST" duration-ms="2172" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login_with_valid_usernameAndpassword -->
-        <test-method signature="Login_with_valid_emailAndpassword()[pri:2, instance:com.Login@6bbe85a8]" started-at="2025-01-13T12:53:21 IST" name="Login_with_valid_emailAndpassword" finished-at="2025-01-13T12:53:25 IST" duration-ms="4402" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login_with_valid_emailAndpassword -->
-        <test-method signature="Login_with_Invalid_username()[pri:3, instance:com.Login@6bbe85a8]" started-at="2025-01-13T12:53:25 IST" name="Login_with_Invalid_username" finished-at="2025-01-13T12:53:31 IST" duration-ms="5656" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login_with_Invalid_username -->
-        <test-method signature="Login_with_Invalid_Gmail()[pri:4, instance:com.Login@6bbe85a8]" started-at="2025-01-13T12:53:31 IST" name="Login_with_Invalid_Gmail" finished-at="2025-01-13T12:53:36 IST" duration-ms="5245" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login_with_Invalid_Gmail -->
-        <test-method signature="Login_with_Invalid_Password()[pri:5, instance:com.Login@6bbe85a8]" started-at="2025-01-13T12:53:36 IST" name="Login_with_Invalid_Password" finished-at="2025-01-13T12:53:42 IST" duration-ms="5996" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login_with_Invalid_Password -->
-      </class> <!-- com.Login -->
-      <class name="com.SignUP">
-        <test-method signature="Sign_Up_with_Valid_Credentials()[pri:1, instance:com.SignUP@5149d738]" started-at="2025-01-13T12:52:57 IST" name="Sign_Up_with_Valid_Credentials" finished-at="2025-01-13T12:53:09 IST" duration-ms="11553" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Sign_Up_with_Valid_Credentials -->
-        <test-method signature="Sign_Up_with_an_already_Registered_Email()[pri:2, instance:com.SignUP@5149d738]" started-at="2025-01-13T12:53:09 IST" name="Sign_Up_with_an_already_Registered_Email" finished-at="2025-01-13T12:53:12 IST" duration-ms="3623" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Sign_Up_with_an_already_Registered_Email -->
-        <test-method signature="SignUp_with_an_Invalid_EmailID()[pri:3, instance:com.SignUP@5149d738]" started-at="2025-01-13T12:53:12 IST" name="SignUp_with_an_Invalid_EmailID" finished-at="2025-01-13T12:53:14 IST" duration-ms="1316" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SignUp_with_an_Invalid_EmailID -->
-        <test-method signature="SignUp_with_Password_ConfirmPassword_Missmatch()[pri:4, instance:com.SignUP@5149d738]" started-at="2025-01-13T12:53:14 IST" name="SignUp_with_Password_ConfirmPassword_Missmatch" finished-at="2025-01-13T12:53:15 IST" duration-ms="1361" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SignUp_with_Password_ConfirmPassword_Missmatch -->
-        <test-method signature="SignUp_with_a_Password_Less_Than_6_Characters()[pri:5, instance:com.SignUP@5149d738]" started-at="2025-01-13T12:53:15 IST" name="SignUp_with_a_Password_Less_Than_6_Characters" finished-at="2025-01-13T12:53:16 IST" duration-ms="1243" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SignUp_with_a_Password_Less_Than_6_Characters -->
-        <test-method signature="SignUp_with_an_Email_Containing_Invalid_Characters_Space()[pri:6, instance:com.SignUP@5149d738]" started-at="2025-01-13T12:53:16 IST" name="SignUp_with_an_Email_Containing_Invalid_Characters_Space" finished-at="2025-01-13T12:53:18 IST" duration-ms="1314" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SignUp_with_an_Email_Containing_Invalid_Characters_Space -->
-        <test-method signature="SignUp_with_an_Password_Containing_Invalid_Characters_Space()[pri:7, instance:com.SignUP@5149d738]" started-at="2025-01-13T12:53:18 IST" name="SignUp_with_an_Password_Containing_Invalid_Characters_Space" finished-at="2025-01-13T12:53:19 IST" duration-ms="1270" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SignUp_with_an_Password_Containing_Invalid_Characters_Space -->
-      </class> <!-- com.SignUP -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
