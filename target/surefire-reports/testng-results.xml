@@ -1,39 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-13T13:42:17 IST" name="Suite" finished-at="2025-01-13T13:49:07 IST" duration-ms="410198">
+  <suite started-at="2025-01-13T17:13:11 IST" name="Suite" finished-at="2025-01-13T17:16:02 IST" duration-ms="170500">
     <groups>
     </groups>
-    <test started-at="2025-01-13T13:42:17 IST" name="Test" finished-at="2025-01-13T13:49:07 IST" duration-ms="410198">
+    <test started-at="2025-01-13T17:13:11 IST" name="Test" finished-at="2025-01-13T17:16:02 IST" duration-ms="170500">
       <class name="Resource.BaseTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Resource.BaseTest@1ed4ae0f]" started-at="2025-01-13T13:42:06 IST" name="setUp" finished-at="2025-01-13T13:42:17 IST" duration-ms="10138" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Resource.BaseTest@46cdf8bd]" started-at="2025-01-13T17:13:01 IST" name="setUp" finished-at="2025-01-13T17:13:11 IST" duration-ms="10367" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="quitPlaywright()[pri:0, instance:Resource.BaseTest@1ed4ae0f]" started-at="2025-01-13T13:49:07 IST" name="quitPlaywright" finished-at="2025-01-13T13:49:08 IST" duration-ms="504" status="PASS">
+        <test-method is-config="true" signature="quitPlaywright()[pri:0, instance:Resource.BaseTest@46cdf8bd]" started-at="2025-01-13T17:16:02 IST" name="quitPlaywright" finished-at="2025-01-13T17:16:02 IST" duration-ms="482" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitPlaywright -->
       </class> <!-- Resource.BaseTest -->
-      <class name="com.GamePlayByFreeUsers">
-        <test-method signature="test_Public_Game_Played_By_Non_Logged_User()[pri:1, instance:com.GamePlayByFreeUsers@25ce9dc4]" started-at="2025-01-13T13:42:17 IST" name="test_Public_Game_Played_By_Non_Logged_User" finished-at="2025-01-13T13:44:09 IST" duration-ms="112722" status="PASS">
+      <class name="com.Research">
+        <test-method signature="test_Free_User_Creates_Game_Manually()[pri:1, instance:com.Research@2eae8e6e]" started-at="2025-01-13T17:13:11 IST" name="test_Free_User_Creates_Game_Manually" finished-at="2025-01-13T17:13:58 IST" duration-ms="47067" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_Public_Game_Played_By_Non_Logged_User -->
-        <test-method signature="test_Public_Game_Played_By_Logged_User_Who_having_Free_account()[pri:2, instance:com.GamePlayByFreeUsers@25ce9dc4]" started-at="2025-01-13T13:44:09 IST" name="test_Public_Game_Played_By_Logged_User_Who_having_Free_account" finished-at="2025-01-13T13:46:09 IST" duration-ms="119740" status="PASS">
+        </test-method> <!-- test_Free_User_Creates_Game_Manually -->
+        <test-method signature="test_Free_User_Play_Manually_Created_Game()[pri:0, instance:com.Research@2eae8e6e]" started-at="2025-01-13T17:13:58 IST" name="test_Free_User_Play_Manually_Created_Game" finished-at="2025-01-13T17:16:02 IST" depends-on-methods="com.Research.test_Free_User_Creates_Game_Manually" duration-ms="123325" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_Public_Game_Played_By_Logged_User_Who_having_Free_account -->
-        <test-method signature="test_Free_User_Create_Game_Using_AI()[pri:3, instance:com.GamePlayByFreeUsers@25ce9dc4]" started-at="2025-01-13T13:46:09 IST" name="test_Free_User_Create_Game_Using_AI" finished-at="2025-01-13T13:47:43 IST" duration-ms="93403" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Free_User_Create_Game_Using_AI -->
-        <test-method signature="test_Free_User_Play_AIGenerated_Game()[pri:0, instance:com.GamePlayByFreeUsers@25ce9dc4]" started-at="2025-01-13T13:47:43 IST" name="test_Free_User_Play_AIGenerated_Game" finished-at="2025-01-13T13:49:07 IST" depends-on-methods="com.GamePlayByFreeUsers.test_Free_User_Create_Game_Using_AI" duration-ms="84234" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Free_User_Play_AIGenerated_Game -->
-      </class> <!-- com.GamePlayByFreeUsers -->
+        </test-method> <!-- test_Free_User_Play_Manually_Created_Game -->
+      </class> <!-- com.Research -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

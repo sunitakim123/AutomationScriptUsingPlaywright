@@ -59,8 +59,8 @@ import java.util.Properties;
 	        }
 
 	        
-	        context = browser.newContext(new Browser.NewContextOptions().setViewportSize(1424, 1024));
-
+	        //context = browser.newContext(new Browser.NewContextOptions().setViewportSize(1424, 1024));
+	        context = browser.newContext(new Browser.NewContextOptions().setViewportSize(1200, 700));
 	       // context = browser.newContext();
 	        page = context.newPage();
 	        int timeout = Integer.parseInt(properties.getProperty("defaultTimeout", "80000")); // default to 30 seconds

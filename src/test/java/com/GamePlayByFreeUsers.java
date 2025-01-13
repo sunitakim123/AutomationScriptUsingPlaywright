@@ -377,9 +377,8 @@ import com.microsoft.playwright.Page;
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Elementary school").setExact(true)).click();
 	      page.getByLabel("No. of Questions").selectOption("10");
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Generate")).click();
-	      Thread.sleep(5000);
-	      
-	      
+	      Thread.sleep(7000);
+	            
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Generate")).click();
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue Anyway")).click();
 	      Thread.sleep(5000);
