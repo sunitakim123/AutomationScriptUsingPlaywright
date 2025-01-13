@@ -47,6 +47,7 @@ import java.util.Properties;
 	        
 	        */
 	        String os = System.getProperty("os.name").toLowerCase();
+	        System.out.println("OS is:-"+os);
 	        boolean isWindows = os.contains("win");
 
 	        if (browserType.equalsIgnoreCase("firefox")) {
