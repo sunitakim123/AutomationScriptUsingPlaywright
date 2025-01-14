@@ -242,7 +242,7 @@ public class Research extends BaseTest {
 	      }
 	
 	
-	@Test(dependsOnMethods = {"test_Free_User_Creates_Game_Manually"})
+	@Test(priority=2)
     public void test_Free_User_Play_Manually_Created_Game() throws InterruptedException
     {
     Page page1 = page.waitForPopup(() -> {
