@@ -21,36 +21,34 @@ import Resource.BaseTest;
 public class Research extends BaseTest {
 
 	@Test(priority=1)
-	public void test_Free_User_Creates_Game_Manually() throws IOException, InterruptedException {
+	public void test_New_user_create_Folders() throws IOException, InterruptedException {
 		  
-  		page.navigate(properties.getProperty("rootUrl"));
+  		//page.navigate(properties.getProperty("rootUrl"));
 		  
-        page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Sign Up Sign Up For Free")).click();
+      /*  page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Sign Up Sign Up For Free")).click();
         Thread.sleep(3000);
         page.waitForNavigation(() -> 
         page.getByPlaceholder("Email Address").fill(generateRandomEmail()));
-
-  	       // System.out.println("email:-"+generateRandomEmail());
-  			page.getByPlaceholder("Password", new Page.GetByPlaceholderOptions().setExact(true)).fill("123456");
-  			page.getByPlaceholder("Confirm Password").fill("123456");
-  			page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Sign Up")).click();
-  			page.waitForNavigation(() -> 
-  		    page.locator("#freeAccount").click());
-  	/*	 page.navigate(properties.getProperty("rootUrl"));
+ 	    System.out.println("email:-"+generateRandomEmail());
+  		page.getByPlaceholder("Password", new Page.GetByPlaceholderOptions().setExact(true)).fill("123456");
+  		page.getByPlaceholder("Confirm Password").fill("123456");
+  		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Sign Up")).click();
+  		page.waitForNavigation(() -> 
+  		page.locator("#freeAccount").click());*/
+  		 page.navigate(properties.getProperty("rootUrl"));
+  		 
   		 page.getByRole(AriaRole.MAIN).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName("Log In")).click();
   	      page.getByPlaceholder("Email Id or Username").click();
-  	      page.getByPlaceholder("Email Id or Username").fill("sunita.del1@gmail.com");
+  	      page.getByPlaceholder("Email Id or Username").fill("sunitakim123@gmail.com");
   	      page.getByPlaceholder("Password").click();
   	      page.getByPlaceholder("Password").fill("123456");
-  	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")).click();*/
+  	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")).click();
+  	      
+  	      //Create a Game
   	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Create Game")).click();
-  	      page.getByPlaceholder("Enter a descriptive title for").fill("Test1");
+  	      page.getByPlaceholder("Enter a descriptive title for").fill("MixQuestion");
   	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Create")).click();
-  	  
-  	 page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" Create Manually Add you own")).click();
-
-  	  //  Locator secondLocator =  page.locator("//*[@id=\"root\"]/div[2]/div/div[2]/div/div/div[2]/div[2]/div/div[3]/div/a[2]");
-  	
+  	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" Create Manually Add you own")).click();
   	      page.getByPlaceholder("Category-1 Title").fill("Categ1");
   	      page.locator(".incompleteQuestion").first().click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click();
@@ -112,7 +110,7 @@ public class Research extends BaseTest {
   	        .setModifiers(Arrays.asList(KeyboardModifier.CONTROLORMETA)));
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).fill("How many minutes are there in 2 hours?");
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
-  	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("How many minutes are there in 2 hours?");
+  	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("120");
   	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("SAVE")).click();
   	      page.getByPlaceholder("Category-3 Title").click();
   	      page.getByPlaceholder("Category-3 Title").fill("Categ-3");
@@ -242,172 +240,216 @@ public class Research extends BaseTest {
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("110");
   	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("SAVE")).click();
-  	      }
-  	
-  	
-  	@Test(dependsOnMethods = {"test_Free_User_Creates_Game_Manually"})
-      public void test_Free_User_Play_Manually_Created_Game() throws InterruptedException
-      {
-      Page page1 = page.waitForPopup(() -> {
-        page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName(" Play Game")).click();
-      });
-      page1.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^Flashcards Self-Paced Review$"))).nth(2).click();
-      assertThat(page1.getByRole(AriaRole.DIALOG)).containsText("UPGRADE toPROGraduate from your Basic plan");
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Close")).click();
-      page1.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^Choice Jeopardy-style Multiple Choice$"))).nth(2).click();
-      assertThat(page1.getByRole(AriaRole.DIALOG)).containsText("Go Pro");
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Close")).click();
-      page1.getByText("Quiz Bowl College Bowl-style").click();
-      assertThat(page1.getByRole(AriaRole.DIALOG)).containsText("UPGRADE toPROGraduate from your Basic plan×Close");
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Close")).click();
-      page1.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^Interactive Choice Self-Paced Jeopardy-style Multiple Choice$"))).nth(2).click();
-      assertThat(page1.getByRole(AriaRole.DIALOG)).containsText("UPGRADE toPROGraduate from your Basic plan");
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Close")).click();
-      page1.getByText("Memory Tile Matching Memory").click();
-      page1.getByText("UPGRADE toPROGraduate from").click();
-      page1.getByText("UPGRADE toPROGraduate from").click();
-      assertThat(page1.getByRole(AriaRole.DIALOG)).containsText("UPGRADE toPROGraduate from your Basic plan");
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Close")).click();
-      Thread.sleep(3000);
-      page1.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Factile Jeopardy-style    ")).click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("5").setExact(true)).click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("No")).click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Auto Select")).click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Begin Game")).click();
-      page1.locator(".gamePointsBlock").first().click();
-      page1.locator("div:nth-child(2) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("span:nth-child(3) > .gamePointsBlock").first().click();
-      page1.locator(".podium-controls").first().click();
-      page1.locator(".podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("span:nth-child(4) > .gamePointsBlock").first().click();
-      page1.locator("div:nth-child(3) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("span:nth-child(5) > .gamePointsBlock").first().click();
-      page1.locator("div:nth-child(4) > .podium-content > .podium-controls").click();
-      page1.locator("div:nth-child(5) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("span:nth-child(6)").first().click();
-      page1.locator("div:nth-child(5) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(2) > span:nth-child(2)").click();
-      page1.locator("div:nth-child(2) > .podium-content > .podium-controls > i:nth-child(2)").click();
-      page1.locator("div:nth-child(3) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(2) > span:nth-child(3) > .gamePointsBlock").click();
-      page1.locator(".podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(2) > span:nth-child(4)").click();
-      page1.locator("div:nth-child(2) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(2) > span:nth-child(5)").click();
-      page1.locator("div:nth-child(3) > .podium-content > .podium-controls").click();
-      page1.locator("div:nth-child(3) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(2) > span:nth-child(6) > .gamePointsBlock").click();
-      page1.locator("div:nth-child(4) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(3) > span:nth-child(2) > .gamePointsBlock").click();
-      page1.locator("div:nth-child(3) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(3) > span:nth-child(3)").click();
-      page1.locator("div:nth-child(4) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(3) > span:nth-child(4)").click();
-      page1.locator("i:nth-child(2)").first().click();
-      page1.locator("div:nth-child(3) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(3) > span:nth-child(5) > .gamePointsBlock").click();
-      page1.locator("div:nth-child(2) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(3) > span:nth-child(6) > .gamePointsBlock").click();
-      page1.locator("div:nth-child(4) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(4) > span:nth-child(2) > .gamePointsBlock").click();
-      page1.locator("div:nth-child(4) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(4) > span:nth-child(3) > .gamePointsBlock").click();
-      page1.locator("div:nth-child(5) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(4) > span:nth-child(4) > .gamePointsBlock").click();
-      page1.locator("div:nth-child(3) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(4) > span:nth-child(5) > .gamePointsBlock").click();
-      page1.locator("div:nth-child(2) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(4) > span:nth-child(6)").click();
-      page1.locator(".podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(5) > span:nth-child(2)").click();
-      page1.locator("div:nth-child(4) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(5) > span:nth-child(3) > .gamePointsBlock").click();
-      page1.locator("div:nth-child(2) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(5) > span:nth-child(4) > .gamePointsBlock").click();
-      page1.locator("div:nth-child(5) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(5) > span:nth-child(5)").click();
-      page1.locator("div:nth-child(2) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(5) > span:nth-child(6)").click();
-      page1.locator("div:nth-child(2) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(6) > span:nth-child(2) > .gamePointsBlock").click();
-      page1.locator("div:nth-child(3) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(6) > span:nth-child(3) > .gamePointsBlock").click();
-      page1.locator(".podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(6) > span:nth-child(4) > .gamePointsBlock").click();
-      page1.locator("div:nth-child(2) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(6) > span:nth-child(5) > .gamePointsBlock").click();
-      page1.locator(".podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      page1.locator("div:nth-child(6) > span:nth-child(6) > .gamePointsBlock").click();
-      page1.locator("div:nth-child(4) > .podium-content > .podium-controls > i").first().click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      assertThat(page1.locator("#invalidWagers")).containsText("Enter Valid Wagers");
-      page1.getByPlaceholder("0").first().click();
-      page1.getByPlaceholder("0").first().press("End");
-      page1.getByPlaceholder("0").first().press("End");
-      page1.getByPlaceholder("0").first().press("Insert");
-      page1.getByPlaceholder("0").first().press("NumLock");
-      page1.getByPlaceholder("0").first().fill("1100");
-      page1.getByPlaceholder("0").nth(1).click();
-      page1.getByPlaceholder("0").nth(1).fill("2500");
-      page1.getByPlaceholder("0").nth(2).click();
-      page1.getByPlaceholder("0").nth(2).fill("1500");
-      page1.getByPlaceholder("0").nth(3).click();
-      page1.getByPlaceholder("0").nth(3).fill("1400");
-      page1.getByPlaceholder("0").nth(4).click();
-      page1.getByPlaceholder("0").nth(4).fill("1400");
-     // page1.getByText("It's Final Factile Time!Halloween MathEnter wager amounts belowEnter Valid").click();
-      page1.getByText("Enter Valid Wagers").click();
-      page1.locator(".podium-controls > i").first().click();
-      page1.locator("div:nth-child(2) > .podium-content > .podium-controls > i").first().click();
-      page1.locator("div:nth-child(3) > .podium-content > .podium-controls > i:nth-child(2)").click();
-      page1.locator("div:nth-child(4) > .podium-content > .podium-controls > i:nth-child(2)").click();
-      page1.locator("div:nth-child(5) > .podium-content > .podium-controls > i:nth-child(2)").click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Reveal Answer")).click();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
-      assertThat(page1.locator("#mainGameBoard")).containsText("Winner");
-      assertThat(page1.getByText("Go HomeShow ScoreFeedback")).isVisible();
-      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Go Home")).click();
-      page1.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Account")).click();
-      // page.locator("#root").click();
-       page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Delete Account")).click();
-       page1.getByRole(AriaRole.TEXTBOX).fill("123456");
-       page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Next!")).click();
-       page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Delete!")).click();
-       page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Yes!")).click();
-       page1.close();
-       page.reload();
+  	    page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Factile Logo My Games")).click();
+  	    
+  	    
+  	    //Preview a game
+  	   page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Preview")).first().click();
+      //assertThat(page.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^PREVIEW$"))).first()).isVisible();
+     // assertThat(page.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^PREVIEW$"))).first()).isVisible();
+      assertThat(page.getByText("CATEG1")).isVisible();
+      assertThat(page.locator(".gamePointsBlock").first()).isVisible();
+      assertThat(page.locator("#game-screen-top")).containsText("$100");
+      page.locator(".gameQuestionBlock").first().click();
+      assertThat(page.locator("#responsive-question")).containsText("What is the capital city of India?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("New Delhi");
+      page.locator(".gameCategoryColumn > span:nth-child(2)").first().click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.getByText("Which planet is known as the")).isVisible();
+      assertThat(page.locator("#responsive-question")).containsText("Which planet is known as the \"Red Planet\"?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Mars");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      page.getByLabel("down navigationBtns").click();
+      assertThat(page.locator("#responsive-question")).containsText("What is the largest animal on Earth?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Blue Whale");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      page.getByLabel("down navigationBtns").click();
+      assertThat(page.locator("#responsive-question")).containsText("Which is the longest river in the world?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Nile River");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      page.getByLabel("down navigationBtns").click();
+      assertThat(page.locator("#responsive-question")).containsText("What is the national flower of India?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Lotus");
+      page.getByLabel("right navigationBtns").click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("How many minutes are there in 2 hours?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("120");
+      page.getByLabel("up navigationBtns").click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("What is the product of 6 and 8?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("48");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      page.getByLabel("up navigationBtns").click();
+      assertThat(page.locator("#responsive-question")).containsText("What is the perimeter of a square with a side length of 5 cm?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("20 cm (Perimeter = 4 × side length)");
+      page.getByLabel("up navigationBtns").click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("If you have 3 apples and you buy 7 more, how many apples do you have in total?1");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("10 Apples");
+      page.getByLabel("up navigationBtns").click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("45 + 27?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("72");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      page.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^FF$"))).nth(2).click();
+      page.locator("div:nth-child(3) > span").first().click();
+      assertThat(page.locator("#responsive-question")).containsText("What is the opposite of the word \"happy\"?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Sad");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      page.getByLabel("down navigationBtns").click();
+      assertThat(page.locator("#responsive-question")).containsText("Complete the sentence: \"The sun is shining _____ in the sky.\"");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Brightly");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      page.locator("div:nth-child(3) > span:nth-child(3)").click();
+      assertThat(page.locator("#responsive-question")).containsText("Identify the noun in this sentence: \"The cat is sleeping on the couch.\"");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Cat couch");
+      page.getByLabel("down navigationBtns").click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("What is the past tense of the verb \"run\"?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Ran");
+      page.getByLabel("down navigationBtns").click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("What is the plural form of the word \"child\"?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("children");
+      page.locator(".gameCategories > div:nth-child(4) > span").first().click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Who is known as the \"Father of the Nation\" in India?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Mahatma Gandhi");
+      page.locator("div:nth-child(4) > span:nth-child(2)").click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("What are the four cardinal directions?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("North, South, East, West");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      page.getByLabel("down navigationBtns").click();
+      assertThat(page.locator("#responsive-question")).containsText("What is the name of the current President of the United States?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Jeo Biden");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      page.locator("div:nth-child(4) > span:nth-child(4)").click();
+      assertThat(page.locator("#responsive-question")).containsText("Which is the largest country in the world by area?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Russia");
+      page.getByLabel("down navigationBtns").click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Name the three branches of the United States government.");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Executive, Legislative, Judicial");
+      page.locator("div:nth-child(5) > span").first().click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("45+45");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("90");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      page.locator("div:nth-child(5) > span:nth-child(2)").click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("50-20");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("30");
+      page.locator("div:nth-child(5) > span:nth-child(3)").click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("60-20");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("40");
+      page.locator("div:nth-child(5) > span:nth-child(4)").click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("25+25");
+      assertThat(page.locator("#responsive-question")).containsText("25+25");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("50");
+      page.locator("div:nth-child(5) > span:nth-child(5)").click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("20");
+      page.locator("div:nth-child(6) > span").first().click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("What planet do we live on?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("earth");
+      page.locator("div:nth-child(6) > span:nth-child(2)").click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("What do plants need to make food?Sunlight, water, carbon dioxide (through photosynthesis");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Sunlight, water, carbon dioxide (through photosynthesis)");
+      page.locator("div:nth-child(6) > span:nth-child(3)").click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("What is the main gas that humans need to breathe?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Oxygen");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      page.locator("div:nth-child(6) > span:nth-child(4)").click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("What is the largest organ in the human body?");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("Skin");
+      page.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^Final Factile$"))).nth(1).click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      assertThat(page.locator("#responsive-question")).containsText("50+60");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+      assertThat(page.locator("#responsive-question")).containsText("110");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Final Factile")).click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Final Factile")).click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Close")).click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Factile Logo My Games")).click();
+  	    
+  	    
+  	    /*
+  	    //create folder1
+  	 Thread.sleep(2000);
+	  	  page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Create Folder New Folder")).click();
+  	      page.getByPlaceholder("Enter Folder Name").fill("folder1");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Save")).click();
+      assertThat(page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" folder1 "))).isVisible();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" folder1 ")).click();
+      assertThat(page.getByText("No Games Found")).isVisible();
+     
+      
+      
+      
+      //Move a game from all games to folder1
+      Thread.sleep(2000);
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" All Games (2)")).click();
+      page.locator("div:nth-child(8) > .game-card-header__icon").first().click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("")).nth(2).click();
+      assertThat(page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" Add Selected Games").setExact(true))).isVisible();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" Add Selected Games").setExact(true)).click();
+      assertThat(page.getByText("SuccessGame added")).isVisible();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" folder1 ")).click();
+      assertThat(page.getByText("MixQuestion")).isVisible();
+   
+   // */
+      
+      
+      
+          //  page1.close();
+      // page.reload();
 
     }
 
+	/*
+	@Test(dependsOnMethods="test")
+  public void test_Free_User_Create_Folder() throws InterruptedException
+  {
+  }*/
 
   	// Generate random email
   	private String generateRandomEmail() {

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>16/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>14/1/1</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jan 15 09:39:13 IST 2025</td>
+<td>Started on:</td><td>Wed Jan 15 11:59:11 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>404 seconds (404448 ms)</td>
+<tr><td>Total time:</td><td>296 seconds (296958 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,81 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.GamePlayByFreeUsers.test_Free_User_Creates_Game_Manually()'><b>test_Free_User_Creates_Game_Manually</b><br>Test class: com.GamePlayByFreeUsers</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Timeout 80000ms exceeded
+	at com.microsoft.playwright.impl.WaitableTimeout.get(WaitableTimeout.java:41)
+	at com.microsoft.playwright.impl.WaitableRace.get(WaitableRace.java:44)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.FrameImpl.waitForNavigationImpl(FrameImpl.java:1041)
+	at com.microsoft.playwright.impl.FrameImpl.waitForNavigationImpl(FrameImpl.java:1021)
+	at com.microsoft.playwright.impl.PageImpl.waitForNavigationImpl(PageImpl.java:1459)
+	at com.microsoft.playwright.impl.PageImpl.lambda$waitForNavigation$89(PageImpl.java:1449)
+	at com.microsoft.playwright.impl.WaitForEventLogger.lambda$get$0(WaitForEventLogger.java:50)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.WaitForEventLogger.get(WaitForEventLogger.java:41)
+	at com.microsoft.playwright.impl.ChannelOwner.withWaitLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.PageImpl.waitForNavigation(PageImpl.java:1449)
+	at com.microsoft.playwright.Page.waitForNavigation(Page.java:7877)
+	at com.GamePlayByFreeUsers.test_Free_User_Creates_Game_Manually(GamePlayByFreeUsers.java:579)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1078566479", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1078566479'><pre>com.microsoft.playwright.TimeoutError: Timeout 80000ms exceeded
+	at com.microsoft.playwright.impl.WaitableTimeout.get(WaitableTimeout.java:41)
+	at com.microsoft.playwright.impl.WaitableRace.get(WaitableRace.java:44)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.FrameImpl.waitForNavigationImpl(FrameImpl.java:1041)
+	at com.microsoft.playwright.impl.FrameImpl.waitForNavigationImpl(FrameImpl.java:1021)
+	at com.microsoft.playwright.impl.PageImpl.waitForNavigationImpl(PageImpl.java:1459)
+	at com.microsoft.playwright.impl.PageImpl.lambda$waitForNavigation$89(PageImpl.java:1449)
+	at com.microsoft.playwright.impl.WaitForEventLogger.lambda$get$0(WaitForEventLogger.java:50)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.WaitForEventLogger.get(WaitForEventLogger.java:41)
+	at com.microsoft.playwright.impl.ChannelOwner.withWaitLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.PageImpl.waitForNavigation(PageImpl.java:1449)
+	at com.microsoft.playwright.Page.waitForNavigation(Page.java:7877)
+	at com.GamePlayByFreeUsers.test_Free_User_Creates_Game_Manually(GamePlayByFreeUsers.java:579)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>84</td>
+<td>com.GamePlayByFreeUsers@70ed52de</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,44 +150,54 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='com.GamePlayByFreeUsers.test_Free_User_Create_Game_Using_AI()'><b>test_Free_User_Create_Game_Using_AI</b><br>Test class: com.GamePlayByFreeUsers</td>
+<td></td>
+<td>81</td>
+<td>com.GamePlayByFreeUsers@70ed52de</td></tr>
+<tr>
+<td title='com.Login.Login_with_Invalid_Gmail()'><b>Login_with_Invalid_Gmail</b><br>Test class: com.Login</td>
+<td></td>
+<td>5</td>
+<td>com.Login@8462f31</td></tr>
+<tr>
+<td title='com.Login.Login_with_valid_emailAndpassword()'><b>Login_with_valid_emailAndpassword</b><br>Test class: com.Login</td>
+<td></td>
+<td>4</td>
+<td>com.Login@8462f31</td></tr>
+<tr>
 <td title='com.Login.Login_with_Invalid_Password()'><b>Login_with_Invalid_Password</b><br>Test class: com.Login</td>
 <td></td>
 <td>5</td>
 <td>com.Login@8462f31</td></tr>
 <tr>
-<td title='com.SignUP.Sign_Up_with_an_already_Registered_Email()'><b>Sign_Up_with_an_already_Registered_Email</b><br>Test class: com.SignUP</td>
-<td></td>
-<td>3</td>
-<td>com.SignUP@2b40ff9c</td></tr>
-<tr>
-<td title='com.Login.Login_with_valid_usernameAndpassword()'><b>Login_with_valid_usernameAndpassword</b><br>Test class: com.Login</td>
+<td title='com.SignUP.SignUp_with_a_Password_Less_Than_6_Characters()'><b>SignUp_with_a_Password_Less_Than_6_Characters</b><br>Test class: com.SignUP</td>
 <td></td>
 <td>1</td>
-<td>com.Login@8462f31</td></tr>
-<tr>
-<td title='com.SignUP.Sign_Up_with_Valid_Credentials()'><b>Sign_Up_with_Valid_Credentials</b><br>Test class: com.SignUP</td>
-<td></td>
-<td>9</td>
 <td>com.SignUP@2b40ff9c</td></tr>
-<tr>
-<td title='com.GamePlayByFreeUsers.test_Free_User_Play_Manually_Created_Game()'><b>test_Free_User_Play_Manually_Created_Game</b><br>Test class: com.GamePlayByFreeUsers</td>
-<td></td>
-<td>146</td>
-<td>com.GamePlayByFreeUsers@70ed52de</td></tr>
-<tr>
-<td title='com.Login.Login_with_Invalid_username()'><b>Login_with_Invalid_username</b><br>Test class: com.Login</td>
-<td></td>
-<td>5</td>
-<td>com.Login@8462f31</td></tr>
 <tr>
 <td title='com.SignUP.SignUp_with_an_Invalid_EmailID()'><b>SignUp_with_an_Invalid_EmailID</b><br>Test class: com.SignUP</td>
 <td></td>
 <td>1</td>
 <td>com.SignUP@2b40ff9c</td></tr>
 <tr>
-<td title='com.GamePlayByFreeUsers.test_Free_User_Creates_Game_Manually()'><b>test_Free_User_Creates_Game_Manually</b><br>Test class: com.GamePlayByFreeUsers</td>
+<td title='com.SignUP.Sign_Up_with_Valid_Credentials()'><b>Sign_Up_with_Valid_Credentials</b><br>Test class: com.SignUP</td>
 <td></td>
-<td>47</td>
+<td>10</td>
+<td>com.SignUP@2b40ff9c</td></tr>
+<tr>
+<td title='com.SignUP.Sign_Up_with_an_already_Registered_Email()'><b>Sign_Up_with_an_already_Registered_Email</b><br>Test class: com.SignUP</td>
+<td></td>
+<td>3</td>
+<td>com.SignUP@2b40ff9c</td></tr>
+<tr>
+<td title='com.SignUP.SignUp_with_an_Email_Containing_Invalid_Characters_Space()'><b>SignUp_with_an_Email_Containing_Invalid_Characters_Space</b><br>Test class: com.SignUP</td>
+<td></td>
+<td>1</td>
+<td>com.SignUP@2b40ff9c</td></tr>
+<tr>
+<td title='com.GamePlayByFreeUsers.test_Free_User_Play_AIGenerated_Game()'><b>test_Free_User_Play_AIGenerated_Game</b><br>Test class: com.GamePlayByFreeUsers</td>
+<td></td>
+<td>88</td>
 <td>com.GamePlayByFreeUsers@70ed52de</td></tr>
 <tr>
 <td title='com.SignUP.SignUp_with_Password_ConfirmPassword_Missmatch()'><b>SignUp_with_Password_ConfirmPassword_Missmatch</b><br>Test class: com.SignUP</td>
@@ -120,40 +205,56 @@ function toggleAllBoxes() {
 <td>1</td>
 <td>com.SignUP@2b40ff9c</td></tr>
 <tr>
-<td title='com.GamePlayByFreeUsers.test_Free_User_Create_Game_Using_AI()'><b>test_Free_User_Create_Game_Using_AI</b><br>Test class: com.GamePlayByFreeUsers</td>
+<td title='com.Login.Login_with_Invalid_username()'><b>Login_with_Invalid_username</b><br>Test class: com.Login</td>
 <td></td>
-<td>81</td>
-<td>com.GamePlayByFreeUsers@70ed52de</td></tr>
-<tr>
-<td title='com.SignUP.SignUp_with_an_Email_Containing_Invalid_Characters_Space()'><b>SignUp_with_an_Email_Containing_Invalid_Characters_Space</b><br>Test class: com.SignUP</td>
-<td></td>
-<td>1</td>
-<td>com.SignUP@2b40ff9c</td></tr>
-<tr>
-<td title='com.SignUP.SignUp_with_a_Password_Less_Than_6_Characters()'><b>SignUp_with_a_Password_Less_Than_6_Characters</b><br>Test class: com.SignUP</td>
-<td></td>
-<td>1</td>
-<td>com.SignUP@2b40ff9c</td></tr>
-<tr>
-<td title='com.Login.Login_with_valid_emailAndpassword()'><b>Login_with_valid_emailAndpassword</b><br>Test class: com.Login</td>
-<td></td>
-<td>4</td>
+<td>5</td>
 <td>com.Login@8462f31</td></tr>
-<tr>
-<td title='com.GamePlayByFreeUsers.test_Free_User_Play_AIGenerated_Game()'><b>test_Free_User_Play_AIGenerated_Game</b><br>Test class: com.GamePlayByFreeUsers</td>
-<td></td>
-<td>88</td>
-<td>com.GamePlayByFreeUsers@70ed52de</td></tr>
 <tr>
 <td title='com.SignUP.SignUp_with_an_Password_Containing_Invalid_Characters_Space()'><b>SignUp_with_an_Password_Containing_Invalid_Characters_Space</b><br>Test class: com.SignUP</td>
 <td></td>
 <td>1</td>
 <td>com.SignUP@2b40ff9c</td></tr>
 <tr>
-<td title='com.Login.Login_with_Invalid_Gmail()'><b>Login_with_Invalid_Gmail</b><br>Test class: com.Login</td>
+<td title='com.Login.Login_with_valid_usernameAndpassword()'><b>Login_with_valid_usernameAndpassword</b><br>Test class: com.Login</td>
 <td></td>
-<td>5</td>
+<td>2</td>
 <td>com.Login@8462f31</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.GamePlayByFreeUsers.test_Free_User_Play_Manually_Created_Game()'><b>test_Free_User_Play_Manually_Created_Game</b><br>Test class: com.GamePlayByFreeUsers</td>
+<td><div><pre>java.lang.Throwable: Method GamePlayByFreeUsers.test_Free_User_Play_Manually_Created_Game()[pri:0, instance:com.GamePlayByFreeUsers@70ed52de] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace819245704", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace819245704'><pre>java.lang.Throwable: Method GamePlayByFreeUsers.test_Free_User_Play_Manually_Created_Game()[pri:0, instance:com.GamePlayByFreeUsers@70ed52de] depends on not successfully finished methods
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>com.GamePlayByFreeUsers@70ed52de</td></tr>
 </table><p>
 </body>
 </html>

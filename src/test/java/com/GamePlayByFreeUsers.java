@@ -578,7 +578,7 @@ import Resource.BaseTest;
 	          System.out.println("generateRandomEmail:-"+generateRandomEmail());
 	          page.waitForNavigation(() -> 
 	          page.getByPlaceholder("Email Address").fill(generateRandomEmail()));
-	          Thread.sleep(2000);
+	          Thread.sleep(3000);
 	    	       // System.out.println("email:-"+generateRandomEmail());
 	    			page.getByPlaceholder("Password", new Page.GetByPlaceholderOptions().setExact(true)).fill("123456");
 	    			page.getByPlaceholder("Confirm Password").fill("123456");
