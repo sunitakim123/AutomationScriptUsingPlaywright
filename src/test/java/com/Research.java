@@ -455,6 +455,7 @@ public class Research extends BaseTest {
   	private String generateRandomEmail() {
   		String randomString = UUID.randomUUID().toString().substring(0, 8); // Generates a random 8-character string
   		return randomString + "1@example.com";
+  		//https://www.youtube.com/watch?v=rAWLXwN3Jp4
   	}
 	    
 }

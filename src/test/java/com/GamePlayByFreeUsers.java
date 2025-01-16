@@ -355,18 +355,34 @@ import Resource.BaseTest;
 	
 	@Test(priority=1)
 	public void test_Free_User_Create_Game_Using_AI() throws IOException, InterruptedException {
+		 Thread.sleep(5000);
+		 
+		 String email1=generateRandomEmail();
+	        System.out.println(email1);
 		   page.navigate(properties.getProperty("rootUrl"));
 		  
+		   page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Sign Up Sign Up For Free")).click();
+		      page.getByPlaceholder("Email Address").click();
+		      page.getByPlaceholder("Email Address").fill(email1);
+		      page.getByPlaceholder("Password", new Page.GetByPlaceholderOptions().setExact(true)).click();
+		      page.getByPlaceholder("Password", new Page.GetByPlaceholderOptions().setExact(true)).fill("123456");
+		      page.getByPlaceholder("Confirm Password").click();
+		      page.getByPlaceholder("Confirm Password").fill("123456");
+		      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Sign Up")).click();
+		 /*  
 	        page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Sign Up Sign Up For Free")).click();
-	        Thread.sleep(3000);
-	        System.out.println("generateRandomEmail:-"+generateRandomEmail());
+	        
+	        //System.out.println("generateRandomEmail:-"+generateRandomEmail());
+	        String email1=generateRandomEmail();
+	        System.out.println(email1);
+	        Thread.sleep(2000);
 	        page.waitForNavigation(() -> 
-	        page.getByPlaceholder("Email Address").fill(generateRandomEmail()));
-	      
+	        page.getByPlaceholder("Email Address").fill(email1));
+	        Thread.sleep(3000);
 	       // System.out.println("email:-"+generateRandomEmail());
 			page.getByPlaceholder("Password", new Page.GetByPlaceholderOptions().setExact(true)).fill("123456");
 			page.getByPlaceholder("Confirm Password").fill("123456");
-			page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Sign Up")).click();
+			page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Sign Up")).click();*/
 	    	page.waitForNavigation(() -> 
 		    page.locator("#freeAccount").click());
 		    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Create Game")).click();
@@ -570,28 +586,36 @@ import Resource.BaseTest;
 	
 	      @Test(priority=2)
 	  	public void test_Free_User_Creates_Game_Manually() throws IOException, InterruptedException {
-	  		  
-	    		page.navigate(properties.getProperty("rootUrl"));
-	  		  
+	    	  Thread.sleep(5000);
+	    	  
+	    	  String email1=generateRandomEmail();
+		        System.out.println(email1);
+			   page.navigate(properties.getProperty("rootUrl"));
+			  
+			   page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Sign Up Sign Up For Free")).click();
+			      page.getByPlaceholder("Email Address").click();
+			      page.getByPlaceholder("Email Address").fill(email1);
+			      page.getByPlaceholder("Password", new Page.GetByPlaceholderOptions().setExact(true)).click();
+			      page.getByPlaceholder("Password", new Page.GetByPlaceholderOptions().setExact(true)).fill("123456");
+			      page.getByPlaceholder("Confirm Password").click();
+			      page.getByPlaceholder("Confirm Password").fill("123456");
+			      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Sign Up")).click();
+	    /*	 page.navigate(properties.getProperty("rootUrl"));
+	    		
 	          page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Sign Up Sign Up For Free")).click();
-	          Thread.sleep(3000);
-	          System.out.println("generateRandomEmail:-"+generateRandomEmail());
-	          page.waitForNavigation(() -> 
-	          page.getByPlaceholder("Email Address").fill(generateRandomEmail()));
+	          String email2=generateRandomEmail();
+		        System.out.println(email2);
+		        Thread.sleep(2000);
+		        page.waitForNavigation(() -> 
+		        page.getByPlaceholder("Email Address").fill(email2));
 	          Thread.sleep(3000);
 	    	       // System.out.println("email:-"+generateRandomEmail());
 	    			page.getByPlaceholder("Password", new Page.GetByPlaceholderOptions().setExact(true)).fill("123456");
 	    			page.getByPlaceholder("Confirm Password").fill("123456");
-	    			page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Sign Up")).click();
+	    			page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Sign Up")).click();  */
 	    			page.waitForNavigation(() -> 
 	    		    page.locator("#freeAccount").click());
-	    	/*	 page.navigate(properties.getProperty("rootUrl"));
-	    		 page.getByRole(AriaRole.MAIN).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName("Log In")).click();
-	    	      page.getByPlaceholder("Email Id or Username").click();
-	    	      page.getByPlaceholder("Email Id or Username").fill("sunita.del1@gmail.com");
-	    	      page.getByPlaceholder("Password").click();
-	    	      page.getByPlaceholder("Password").fill("123456");
-	    	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")).click();*/
+	    
 	    	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Create Game")).click();
 	    	      page.getByPlaceholder("Enter a descriptive title for").fill("Test1");
 	    	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Create")).click();
