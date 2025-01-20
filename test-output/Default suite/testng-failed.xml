@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Research">
+      <class name="com.TestPreview">
         <methods>
-          <include name="deleteCreatedGame"/>
+          <include name="test_preview_Public_Game"/>
           <include name="setUp"/>
           <include name="quitPlaywright"/>
         </methods>
-      </class> <!-- com.Research -->
+      </class> <!-- com.TestPreview -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

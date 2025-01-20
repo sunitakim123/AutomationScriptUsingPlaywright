@@ -12,7 +12,7 @@ import Resource.BaseTest;
 
 public class TestcaseLogin extends BaseTest {
 
-	@Test(priority=3)
+	@Test(priority=1)
 	public void Login_with_Invalid_username() throws IOException, InterruptedException {
 		Thread.sleep(2000);
 		  page.navigate(properties.getProperty("rootUrl"));

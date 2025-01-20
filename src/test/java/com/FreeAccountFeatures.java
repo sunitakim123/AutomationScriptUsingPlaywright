@@ -457,10 +457,185 @@ public class FreeAccountFeatures extends BaseTest {
       System.out.println("A new user with a free account has successfully previewed the game they created.");
   	  
 	}
-  	    
+	@Test(priority=4)
+	public void test_Preview_A_Public_Game() throws IOException, InterruptedException {
+		Thread.sleep(2000);
+	      page.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^Public Games$"))).click();
+	      page.locator("div:nth-child(2) > .game-card-template__footer > .game-card-footer > button").first().click();
+	      page.locator(".gamePointsBlock").first().click();
+	      assertThat(page.locator("#responsive-question")).containsText("What are discrete geographic features?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Points, lines, and polygons.");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      page.getByLabel("down navigationBtns").click();
+	      assertThat(page.locator("#responsive-question")).containsText("What are the two types of data structures used in GIS?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Raster and vector.");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      page.getByLabel("down navigationBtns").click();
+	      assertThat(page.locator("#responsive-question")).containsText("What are the four components of a GIS?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Hardware, software, humanware, and data.");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      page.getByLabel("down navigationBtns").click();
+	      assertThat(page.locator("#responsive-question")).containsText("What are continuous geographic features?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Data that exists continuously in the landscape (e.g. temperature).");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      page.getByLabel("down navigationBtns").click();
+	      assertThat(page.locator("#responsive-question")).containsText("How is spatial data collected?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("In-situ (collected on the ground) and remote sensing (collected above the ground).");
+	      page.getByLabel("right navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What are some of the current issues in GIS?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Open source data and software. Privacy and big data. New technologies. Sustainability issues.");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What are some of the current issues in GIS?");
+	      page.getByLabel("up navigationBtns").click();
+	      page.getByText("Where has qualitative GIS").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.getByText("Critical and feminist GIS,")).isVisible();
+	      page.getByLabel("up navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("How did the 'science wars' in the 1990s impact GIS?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Resulted in debate between quantitative GIS-scientists and human geographers and the development of 'critical GIS'.");
+	      page.getByLabel("up navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.getByText("What makes GIS powerful?")).isVisible();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Funding and research grants, jobs, information, student enrollment, mesmerising images, power to convince.");
+	      page.getByLabel("up navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What were some of the key criticisms of GIS in the 1990s?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("A tool of the rich and powerful. Ethical issues: surveillance, privacy, and the military. Generalisation.");
+	      page.getByLabel("right navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What is GIS?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("A system for caputuring, storing, retrieving, analysing, and displaying spatial data.");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      page.getByLabel("down navigationBtns").click();
+	      assertThat(page.locator("#responsive-question")).containsText("What is buffering?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Creation of a polygon that is a specified distance (e.g. 100 m) around a point, line, or polygon feature.");
+	      page.getByLabel("down navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What is an example of a typical point-in-polygon overlay analysis problem?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Residential housing (points) in school districts (polygons).");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      page.getByLabel("down navigationBtns").click();
+	      assertThat(page.locator("#responsive-question")).containsText("What is an example of a typical line-in-polygon overlay?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Powerline network (lines) over forest types (polygons).");
+	      page.getByLabel("down navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What is geocoding?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Process of finding a geographic location from an address.");
+	      page.getByLabel("right navigationBtns").click();
+	      page.getByLabel("up navigationBtns").dblclick();
+	      page.locator("div:nth-child(4) > span").first().click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What is the difference between cartography and spatial analysis?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Cartography is the visualisation of data. Spatial analysis extracts or creates new information from spatial data.");
+	      page.getByLabel("down navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Who made the first pre-GIS spatial analysis map? What did the map communicate?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Dr. John Snow mapped cholera deaths in London, linking an outbreak to a contaminated water pump in Soho.");
+	      page.getByLabel("down navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What is a legend? What does it contain?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("A cartographic device used to show how thematic information on a map is organised and symbolised. Includes: title, classes, class intervals, and/or symbolisation.");
+	      page.getByLabel("down navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What is the difference between nominal, ordinal, and interval/ratio data?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Nominal=names or categories; Ordinal=qualities (e.g. big/small); Interval/ratio=quantitative.");
+	      page.getByLabel("down navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What are the fundamental components of a map?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Title, scale, legend, north arrow, metadata, source, date. And the map(s)!");
+	      page.getByLabel("right navigationBtns").click();
+	      page.getByLabel("up navigationBtns").dblclick();
+	      page.locator("div:nth-child(5) > span").first().click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What is a pixel?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("A 2-D picture element that is the smallest nondivisible element of a digital (raster) image.");
+	      page.getByLabel("down navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What is remote sensing?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Measurement or acquisition of information of some object/phenomenon by a recording device not in physical or intimate contact with the object/phenomenon being studied.");
+	      page.getByLabel("down navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What is geotagging?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Adding geographical identification metadata to various media such as photographs or videos.");
+	      page.getByLabel("down navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What is a census?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("The systematic collection of information about all/most members of a population.");
+	      page.getByLabel("down navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What is a global positioning system (GPS)?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("A constellation of 24 to 32 satellites operating in six different orbits providing users with position, navigation, and timing services.");
+	      page.getByLabel("right navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What are some examples of projections?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("Orthographic, Azimuthal Equidistant, Mercator, Mollewide, Lambert Conformal Conic, and Albers Conic Equal-area.");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      page.locator("div:nth-child(6) > span:nth-child(4)").click();
+	      assertThat(page.locator("#responsive-question")).containsText("What are the two common types of coordinate systems used in GIS?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("1. Global or spherical coordinate (geographic) systems based on latitude and longitude. 2. Projected coordinate systems based on a map projection.");
+	      page.getByLabel("up navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What is georeferencing?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      page.getByText("Ability to locate objects and").click();
+	      assertThat(page.locator("#responsive-question")).containsText("Ability to locate objects and/or areas accurately in geographic space.");
+	      page.getByLabel("down navigationBtns").click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What are the two common types of coordinate systems used in GIS?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("1. Global or spherical coordinate (geographic) systems based on latitude and longitude. 2. Projected coordinate systems based on a map projection.");
+	      page.getByLabel("down navigationBtns").click();
+	      assertThat(page.locator("#game-screen-top")).containsText("See Question");
+	      assertThat(page.locator("#responsive-question")).containsText("Orthographic, Azimuthal Equidistant, Mercator, Mollewide, Lambert Conformal Conic, and Albers Conic Equal-area.");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What are some examples of projections?");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Final Factile")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("What makes spatial data special? Give three reasons.");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Answer")).click();
+	      assertThat(page.locator("#responsive-question")).containsText("1. Real world (x,y) locations. 2. Spatial dependence/autocorrelation. 3. Data distributed over the curved surface of the Earth.");
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Close")).click();
+	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Factile Logo My Games")).click();
+	      page.locator("#sidebar-nav__item-myGames").getByText("My Games").click();
+	      System.out.println("Preview a public game is working fine");
+	      Thread.sleep(2000);
+	      
+	    }
+	
+	
+	
   	
 
-	@Test(priority=4)
+	@Test(priority=5)
       public void test_Move_A_CreatedGame_From_AllGames_To_CreatedFolder() throws InterruptedException
       {
       
@@ -482,7 +657,7 @@ public class FreeAccountFeatures extends BaseTest {
       
       
 	}
-	@Test(priority=5)
+	@Test(priority=6)
       public void test_Delete_Folder() throws InterruptedException
       {
       
@@ -494,7 +669,7 @@ public class FreeAccountFeatures extends BaseTest {
       Thread.sleep(2000);
 	}
 
-  	@Test(priority=6)
+  	@Test(priority=7)
       public void test_Delete_Created_Game() throws InterruptedException
       {
       Thread.sleep(2000);
@@ -508,7 +683,7 @@ System.out.println( "A new user with a free account has successfully deleted a c
 	}
       
 
-	@Test(priority=7)
+	@Test(priority=8)
    public void test_Delete_Account() throws InterruptedException
    {
 	   Thread.sleep(2000);
