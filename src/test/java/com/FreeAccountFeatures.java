@@ -274,7 +274,9 @@ public class FreeAccountFeatures extends BaseTest {
   	    Thread.sleep(2000);
   	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("SAVE")).click();
   	    page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Factile Logo My Games")).click();
-  	    page.reload();  	  Thread.sleep(2000);
+  	    page.reload();  	
+  	    System.out.println("A new user with a free account has successfully created a game. ");
+  	    Thread.sleep(2000);
 	}
 
 	@Test(priority=3)
@@ -452,6 +454,7 @@ public class FreeAccountFeatures extends BaseTest {
       page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Close")).click();
       page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Factile Logo My Games")).click();
       Thread.sleep(2000);
+      System.out.println("A new user with a free account has successfully previewed the game they created.");
   	  
 	}
   	    
@@ -474,7 +477,9 @@ public class FreeAccountFeatures extends BaseTest {
       page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("")).nth(2).click();
       page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" Add Selected Games").setExact(true)).click();
       page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" folder1 ")).click();
+      System.out.println("A new user with a free account has created a folder and moved the game from AllGames to CreatedFolder.");
       assertThat(page.getByText("MixQuestion")).isVisible();
+      
       
 	}
 	@Test(priority=5)
@@ -485,6 +490,8 @@ public class FreeAccountFeatures extends BaseTest {
       page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("")).nth(2).click();
       page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" Delete").setExact(true)).click();
       page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Yes, Delete it!")).click();
+      System.out.println("A new user with a free account has successfully deleted a folder they previously created.");
+      Thread.sleep(2000);
 	}
 
   	@Test(priority=6)
@@ -497,6 +504,7 @@ public class FreeAccountFeatures extends BaseTest {
       page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("OK")).click();
       Thread.sleep(3000);
       assertThat(page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Upgrade to Pro"))).isVisible();
+System.out.println( "A new user with a free account has successfully deleted a created Game they previously created.");
 	}
       
 
@@ -511,7 +519,7 @@ public class FreeAccountFeatures extends BaseTest {
 		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Delete!")).click();
 		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Yes!")).click();
         page.reload();
-
+System.out.println("Delete account is working fine for new users");
     }
 
 	/*

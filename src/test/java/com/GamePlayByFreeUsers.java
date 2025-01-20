@@ -193,6 +193,7 @@ import Resource.BaseTest;
 			      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue ")).click();
 			      assertThat(page1.locator("#mainGameBoard")).containsText("Winner");
 			      page1.close();
+			      System.out.println("A non-logged-in user has successfully played a public game.");
 			      //assertThat(page1.getByText("Go HomeShow ScoreFeedback")).isVisible();
 		    		}
 
@@ -349,7 +350,9 @@ import Resource.BaseTest;
 	      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Logout")).click();
 	     
 	      page1.close();
-	      page.reload();}
+	      page.reload();
+	System.out.println("A new user with a free account has successfully played a public game.");      
+	}
 
 	
 	
@@ -468,6 +471,9 @@ import Resource.BaseTest;
 	      page.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^CAT-4100200300400500$"))).getByRole(AriaRole.BUTTON).nth(4).click();
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("+")).click();
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("<< BACK")).click();
+	      System.out.println("\r\n"
+	      		+ "A new user with a free account has successfully created a game using AI.");
+	      	      Thread.sleep(2000);
 	}
 	      
 	     
@@ -580,6 +586,7 @@ import Resource.BaseTest;
 		      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Delete!")).click();
 		      page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Yes!")).click();
 		      page1.close();
+		      System.out.println("A new user with a free account has played an AI-generated game that they created.");
 		      page.reload();
 	    }
 	    
@@ -815,6 +822,9 @@ import Resource.BaseTest;
 	    	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
 	    	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("110");
 	    	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("SAVE")).click();
+	    	      System.out.println("\r\n"
+	    	      		+ "A new user with a free account has successfully created a game manually.");
+	    	      Thread.sleep(2000);
 	    	      }
 	    	
 	    	
@@ -977,6 +987,7 @@ import Resource.BaseTest;
 	         page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Delete!")).click();
 	         page1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Yes!")).click();
 	         page1.close();
+	         System.out.println("A new user with a free account has played a manually created game.");
 	         page.reload();
 
 	      }

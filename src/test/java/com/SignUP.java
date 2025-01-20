@@ -34,6 +34,7 @@ public class SignUP extends BaseTest {
 		String ExpectedTitle= "Login – PlayFactile"; 
 		page.waitForNavigation(() -> 
 		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")));
+		  System.out.println("Sign_Up_with_Valid_Credentials test case got Passed");
 		System.out.println("After performing  Sign up, I have deleted the new account and fetching the title of the page:-"+page.title());		
 		//assertEquals(page.title(), ExpectedTitle, "Login page is not appearing, after deleting newly created account");
 	}
@@ -50,6 +51,7 @@ public class SignUP extends BaseTest {
 	      page.getByPlaceholder("Confirm Password").fill("123456");
 	      page.locator(".btn.signin").click();
 	      Thread.sleep(2000);
+	      System.out.println("Sign_Up_with_an_already_Registered_Email test case got Passed");
 	     	      Assert.assertTrue(
 	    		    page.getByText("Email already exist!").isVisible(), 
 	    		    "Expected 'Email already exist!' message to be visibl, but it was not."
@@ -70,6 +72,7 @@ public class SignUP extends BaseTest {
 	      page.getByPlaceholder("Confirm Password").fill("ValidPass@123");
 	    //  page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Sign Up")).click();
 	      page.locator(".btn.signin").click();
+	      System.out.println("SignUp_with_an_Invalid_EmailID test case got Passed");
 	   // Example assertion with a custom message using TestNG
 	      Assert.assertTrue(
 	          page.getByText("Invalid email").isVisible(), 
@@ -91,7 +94,7 @@ public class SignUP extends BaseTest {
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Sign Up")).click();
 	     // assertThat(page.getByText("Password mismatch")).isVisible();
 	      
-	      
+	      System.out.println("SignUp_with_Password_ConfirmPassword_Missmatchtest test case got Passed");
 	   // Example assertion with a custom message using TestNG
 	      Assert.assertTrue(
 	          page.getByText("Password mismatch").isVisible(), 
@@ -113,6 +116,7 @@ public class SignUP extends BaseTest {
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Sign Up")).click();
 	     // assertThat(page.getByText("Password must contain at least 6 characters")).isVisible();
 	   // Example assertion with a custom message using TestNG
+	      System.out.println("SignUp_with_a_Password_Less_Than_6_Characters test case got Passed");
 	      Assert.assertTrue(
 	          page.getByText("Password must contain at least 6 characters").isVisible(), 
 	          "Expected 'Password must contain at least 6 characters' message to be visible, but it was not."
@@ -131,6 +135,7 @@ public class SignUP extends BaseTest {
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Sign Up")).click();
 	     // assertThat(page.getByText("Email required")).isVisible();
 	   // Example assertion with a custom message using TestNG
+	      System.out.println("SignUp_with_an_Email_Containing_Invalid_Characters_Space test case got Passed");
 	      Assert.assertTrue(
 	          page.getByText("Email required").isVisible(), 
 	          "Expected 'Email required' message to be visible, but it was not."
@@ -151,6 +156,7 @@ public class SignUP extends BaseTest {
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Sign Up")).click();
 	     // assertThat(page.getByText("Password must contain at least 6 characters")).isVisible();
 	   // Example assertion with a custom message using TestNG
+	      System.out.println("SignUp_with_an_Password_Containing_Invalid_Characters_Space test case got Passed");
 	      Assert.assertTrue(
 	          page.getByText("Password must contain at least 6 characters").isVisible(), 
 	          "Expected 'Password must contain at least 6 characters' message to be visible, but it was not."

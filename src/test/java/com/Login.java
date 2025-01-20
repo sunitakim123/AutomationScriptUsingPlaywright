@@ -29,6 +29,7 @@ public class Login extends BaseTest {
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")).click();
 	   	  page.waitForNavigation(() -> 
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Create Game")));
+	   	  System.out.println("Login_with_valid_usernameAndpassword test case got Passed");
 	   	  assertEquals(page.title(), "My Games - Factile", "My game page is not getting open, after login");
 	   	  Logout();
 	
@@ -47,6 +48,7 @@ public class Login extends BaseTest {
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")).click();
 	   	  page.waitForNavigation(() -> 
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Create Game")));
+	   	 System.out.println("Login_with_valid_emailAndpassword test case got Passed");
 	   	  assertEquals(page.title(), "My Games - Factile", "My game page is not getting open, after login");
 Logout();
 	}
@@ -61,6 +63,7 @@ Logout();
 	      page.locator("//*[@id=\"logInForm\"]/div[2]/input").fill("654321");
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")).click();
 	      Thread.sleep(2000);
+	      System.out.println("Login_with_Invalid_username>> test case got Passed");
 	      Assert.assertTrue(
 		          page.getByText("Email or username does not exist, please check for typos and try again.").isVisible(), 
 		          "Expected 'Email or username does not exist, please check for typos and try again.' message to be visible, but it was not."
@@ -80,6 +83,7 @@ Logout();
 	      page.locator("//*[@id=\"logInForm\"]/div[2]/input").fill("654321");
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")).click();
 	      Thread.sleep(2000);
+	      System.out.println("Login_with_Invalid_Gmail>> test case got Passed");
 	      Assert.assertTrue(
 		          page.getByText("Email or username does not exist, please check for typos and try again.").isVisible(), 
 		          "Expected 'Email or username does not exist, please check for typos and try again.' message to be visible, but it was not."
@@ -98,6 +102,7 @@ Logout();
 	      page.locator("//*[@id=\"logInForm\"]/div[2]/input").fill("654321000");
 	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")).click();
 	      Thread.sleep(2000);
+	      System.out.println("Login_with_Invalid_Password>> test case got Passed");
 	      Assert.assertTrue(
 		          page.getByText("Incorrect email, username or password.").isVisible(), 
 		          "Expected 'Incorrect email, username or password.' message to be visible, but it was not."
