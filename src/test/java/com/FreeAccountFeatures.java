@@ -18,23 +18,30 @@ import com.microsoft.playwright.options.KeyboardModifier;
 
 import Resource.BaseTest;
 
-public class Research extends BaseTest {
+public class FreeAccountFeatures extends BaseTest {
 
 	@Test(priority=1)
-	public void test_New_user_create_Folders() throws IOException, InterruptedException {
+	public void test_SignUP_FreeAccount() throws IOException, InterruptedException {
 		  
-  		//page.navigate(properties.getProperty("rootUrl"));
+		
+		Thread.sleep(2000);
+		 String email1=generateRandomEmail();
+	        System.out.println(email1);
+		
+  		page.navigate(properties.getProperty("rootUrl"));
 		  
-      /*  page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Sign Up Sign Up For Free")).click();
+        page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Sign Up Sign Up For Free")).click();
         Thread.sleep(3000);
         page.waitForNavigation(() -> 
-        page.getByPlaceholder("Email Address").fill(generateRandomEmail()));
- 	    System.out.println("email:-"+generateRandomEmail());
+        page.getByPlaceholder("Email Address").fill(email1));
+ 	   
   		page.getByPlaceholder("Password", new Page.GetByPlaceholderOptions().setExact(true)).fill("123456");
   		page.getByPlaceholder("Confirm Password").fill("123456");
   		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Sign Up")).click();
   		page.waitForNavigation(() -> 
-  		page.locator("#freeAccount").click());*/
+  		page.locator("#freeAccount").click());
+	}
+	      /*
   		 page.navigate(properties.getProperty("rootUrl"));
   		 
   		 page.getByRole(AriaRole.MAIN).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName("Log In")).click();
@@ -43,12 +50,20 @@ public class Research extends BaseTest {
   	      page.getByPlaceholder("Password").click();
   	      page.getByPlaceholder("Password").fill("123456");
   	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")).click();
-  	      
+  	    */
+
+	@Test(priority=2)
+	  public void test_Create_Game_In_NewAccount_Who_having_FreeAccount() throws InterruptedException
+      {
+      
+      Thread.sleep(2000);
   	      //Create a Game
+  	    Thread.sleep(2000);
   	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Create Game")).click();
   	      page.getByPlaceholder("Enter a descriptive title for").fill("MixQuestion");
   	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Create")).click();
   	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" Create Manually Add you own")).click();
+  	      Thread.sleep(2000);
   	      page.getByPlaceholder("Category-1 Title").fill("Categ1");
   	      page.locator(".incompleteQuestion").first().click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click();
@@ -67,6 +82,7 @@ public class Research extends BaseTest {
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("Blue Whale");
+  	    Thread.sleep(2000);
   	      page.locator("span:nth-child(4)").first().click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click();
@@ -80,6 +96,7 @@ public class Research extends BaseTest {
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("Lotus");
   	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("SAVE")).click();
   	      page.getByPlaceholder("Category-2 Title").click();
+  	    Thread.sleep(2000);
   	      page.getByPlaceholder("Category-2 Title").fill("CaTEG-2");
   	      page.locator(".incompleteQuestion").first().click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click();
@@ -93,6 +110,7 @@ public class Research extends BaseTest {
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).fill("If you have 3 apples and you buy 7 more, how many apples do you have in total?1");
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("0");
+  	    Thread.sleep(2000);
   	      page.getByText("0", new Page.GetByTextOptions().setExact(true)).fill("10 Apples");
   	      page.locator("div:nth-child(2) > span:nth-child(4)").click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click();
@@ -104,6 +122,7 @@ public class Research extends BaseTest {
   	        .setModifiers(Arrays.asList(KeyboardModifier.CONTROLORMETA)));
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).fill("What is the perimeter of a square with a side length of 5 cm?");
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
+  	    Thread.sleep(2000);
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill(" 20 cm (Perimeter = 4 × side length)");
   	      page.locator("div:nth-child(2) > span:nth-child(5)").click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click(new Locator.ClickOptions()
@@ -112,6 +131,7 @@ public class Research extends BaseTest {
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("120");
   	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("SAVE")).click();
+  	    Thread.sleep(2000);
   	      page.getByPlaceholder("Category-3 Title").click();
   	      page.getByPlaceholder("Category-3 Title").fill("Categ-3");
   	      page.locator(".incompleteQuestion").first().click();
@@ -127,6 +147,7 @@ public class Research extends BaseTest {
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).fill("Complete the sentence: \"The sun is shining _____ in the sky.\"");
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("Brightly");
+  	    Thread.sleep(2000);
   	      page.locator("div:nth-child(3) > span:nth-child(3)").click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click(new Locator.ClickOptions()
   	        .setModifiers(Arrays.asList(KeyboardModifier.CONTROLORMETA)));
@@ -138,7 +159,9 @@ public class Research extends BaseTest {
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).fill("What is the past tense of the verb \"run\"?");
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
+  	    Thread.sleep(2000);
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("R");
+  	      
   	      page.getByText("R", new Page.GetByTextOptions().setExact(true)).fill("Ran");
   	      page.locator("div:nth-child(3) > span:nth-child(5)").click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click();
@@ -146,7 +169,7 @@ public class Research extends BaseTest {
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("children");
   	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("SAVE")).click();   
-
+  	    Thread.sleep(2000);
   	      page.getByPlaceholder("Category-4 Title").click();
   	      page.getByPlaceholder("Category-4 Title").fill("Categ-4");
   	      page.locator("div:nth-child(4) > span:nth-child(3)").click();
@@ -156,6 +179,7 @@ public class Research extends BaseTest {
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("Mahatma Gandhi");
   	      page.locator("div:nth-child(4) > span:nth-child(2)").click();
+  	    Thread.sleep(2000);
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).fill("What are the four cardinal directions?");
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
@@ -163,6 +187,7 @@ public class Research extends BaseTest {
   	      page.locator("div:nth-child(4) > span:nth-child(3)").click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click(new Locator.ClickOptions()
   	        .setModifiers(Arrays.asList(KeyboardModifier.CONTROLORMETA)));
+  	    Thread.sleep(2000);
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).fill("What is the name of the current President of the United States?");
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("Jeo Biden");
@@ -172,11 +197,13 @@ public class Research extends BaseTest {
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("Russia");
   	      page.locator("div:nth-child(4) > span:nth-child(5)").click();
+  	    Thread.sleep(2000);
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).fill("Name the three branches of the United States government.");
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("Executive, Legislative, Judicial");
   	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("SAVE")).click();
+  	    Thread.sleep(2000);
   	      page.getByPlaceholder("Category-5 Title").click();
   	      page.getByPlaceholder("Category-5 Title").fill("Categ-5");
   	      page.locator("div:nth-child(5) > span:nth-child(3) > .gamePointsBlock").click();
@@ -189,6 +216,7 @@ public class Research extends BaseTest {
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).fill("50-20");
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("30");
+  	    Thread.sleep(2000);
   	      page.locator("div:nth-child(5) > span:nth-child(3)").click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).fill("60-20");
@@ -199,6 +227,7 @@ public class Research extends BaseTest {
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).fill("25+25");
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("50");
+  	    Thread.sleep(2000);
   	      page.locator("div:nth-child(5) > span:nth-child(5)").click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).fill("100-80");
@@ -214,6 +243,7 @@ public class Research extends BaseTest {
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("earth");
   	      page.locator("div:nth-child(6) > span:nth-child(2)").click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click();
+  	    Thread.sleep(2000);
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).fill("What do plants need to make food?Sunlight, water, carbon dioxide (through photosynthesis");
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click(new Locator.ClickOptions()
   	        .setModifiers(Arrays.asList(KeyboardModifier.CONTROLORMETA)));
@@ -225,6 +255,7 @@ public class Research extends BaseTest {
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("Oxygen");
   	      page.locator("div:nth-child(6) > span:nth-child(4)").click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click();
+  	    Thread.sleep(2000);
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).fill("What is the largest organ in the human body?");
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("Skin");
@@ -234,20 +265,30 @@ public class Research extends BaseTest {
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("Solid, Liquid, Gas");
   	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("SAVE")).click();
+  	    Thread.sleep(2000);
   	      page.getByText("Final Factile").click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#question").getByRole(AriaRole.TEXTBOX).fill("50+60");
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).click();
   	      page.locator("#answer").getByRole(AriaRole.TEXTBOX).fill("110");
+  	    Thread.sleep(2000);
   	      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("SAVE")).click();
   	    page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Factile Logo My Games")).click();
-  	    
-  	    
-  	    //Preview a game
+  	    page.reload();  	  Thread.sleep(2000);
+	}
+
+	@Test(priority=3)
+  	  public void test_Preview_OF_CreatedGame() throws InterruptedException
+      {
+      
+      Thread.sleep(2000); 
+  	    //Preview a created  game
+  	  Thread.sleep(2000);
   	   page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Preview")).first().click();
       //assertThat(page.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^PREVIEW$"))).first()).isVisible();
      // assertThat(page.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^PREVIEW$"))).first()).isVisible();
-      assertThat(page.getByText("CATEG1")).isVisible();
+  	 Thread.sleep(2000);
+  	   assertThat(page.getByText("CATEG1")).isVisible();
       assertThat(page.locator(".gamePointsBlock").first()).isVisible();
       assertThat(page.locator("#game-screen-top")).containsText("$100");
       page.locator(".gameQuestionBlock").first().click();
@@ -410,38 +451,66 @@ public class Research extends BaseTest {
       page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("See Question")).click();
       page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Close")).click();
       page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Factile Logo My Games")).click();
+      Thread.sleep(2000);
+  	  
+	}
   	    
-  	    
-  	    /*
-  	    //create folder1
-  	 Thread.sleep(2000);
-	  	  page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Create Folder New Folder")).click();
-  	      page.getByPlaceholder("Enter Folder Name").fill("folder1");
-      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Save")).click();
-      assertThat(page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" folder1 "))).isVisible();
-      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" folder1 ")).click();
-      assertThat(page.getByText("No Games Found")).isVisible();
-     
+  	
+
+	@Test(priority=4)
+      public void test_Move_A_CreatedGame_From_AllGames_To_CreatedFolder() throws InterruptedException
+      {
       
-      
+      Thread.sleep(2000);
       
       //Move a game from all games to folder1
       Thread.sleep(2000);
-      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" All Games (2)")).click();
-      page.locator("div:nth-child(8) > .game-card-header__icon").first().click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Create Folder New Folder")).click();
+      page.getByPlaceholder("Enter Folder Name").fill("folder1");
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Save")).click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" All Games (1)")).click();
+      Thread.sleep(2000);
+      page.locator("div:nth-child(8) > .game-card-header__icon").click();
       page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("")).nth(2).click();
-      assertThat(page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" Add Selected Games").setExact(true))).isVisible();
       page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" Add Selected Games").setExact(true)).click();
-      assertThat(page.getByText("SuccessGame added")).isVisible();
       page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" folder1 ")).click();
       assertThat(page.getByText("MixQuestion")).isVisible();
-   
-   // */
       
+	}
+	@Test(priority=5)
+      public void test_Delete_Folder() throws InterruptedException
+      {
       
+      Thread.sleep(2000);
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("")).nth(2).click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" Delete").setExact(true)).click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Yes, Delete it!")).click();
+	}
+
+  	@Test(priority=6)
+      public void test_Delete_Created_Game() throws InterruptedException
+      {
+      Thread.sleep(2000);
+      page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Edit")).click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(" Delete")).click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Yes, Delete it!")).click();
+      page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("OK")).click();
+      Thread.sleep(3000);
+      assertThat(page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Upgrade to Pro"))).isVisible();
+	}
       
-          //  page1.close();
-      // page.reload();
+
+	@Test(priority=7)
+   public void test_Delete_Account() throws InterruptedException
+   {
+	   Thread.sleep(2000);
+		page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Account")).click();
+		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Delete Account")).click();
+		page.getByRole(AriaRole.TEXTBOX).fill("123456");
+		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Next!")).click();
+		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Delete!")).click();
+		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Yes!")).click();
+        page.reload();
 
     }
 

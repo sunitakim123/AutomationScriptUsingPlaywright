@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>16/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>20/5/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jan 16 16:38:18 IST 2025</td>
+<td>Started on:</td><td>Fri Jan 17 17:48:59 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>391 seconds (391137 ms)</td>
+<tr><td>Total time:</td><td>1068 seconds (1068085 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,674 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.FreeAccountFeatures.test_Delete_Folder()'><b>test_Delete_Folder</b><br>Test class: com.FreeAccountFeatures</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;?&quot;)).nth(2)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:175)
+	at com.microsoft.playwright.Locator.click(Locator.java:2493)
+	at com.FreeAccountFeatures.test_Delete_Folder(FreeAccountFeatures.java:484)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;?&quot;)).nth(2)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 44 more
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1620459733", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1620459733'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;?&quot;)).nth(2)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:175)
+	at com.microsoft.playwright.Locator.click(Locator.java:2493)
+	at com.FreeAccountFeatures.test_Delete_Folder(FreeAccountFeatures.java:484)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;?&quot;)).nth(2)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 44 more
+</pre></div></td>
+<td>82</td>
+<td>com.FreeAccountFeatures@17f9d882</td></tr>
+<tr>
+<td title='com.FreeAccountFeatures.test_Delete_Created_Game()'><b>test_Delete_Created_Game</b><br>Test class: com.FreeAccountFeatures</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName(&quot;Edit&quot;))
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:175)
+	at com.microsoft.playwright.Locator.click(Locator.java:2493)
+	at com.FreeAccountFeatures.test_Delete_Created_Game(FreeAccountFeatures.java:493)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName(&quot;Edit&quot;))
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 44 more
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace422409467", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace422409467'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName(&quot;Edit&quot;))
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:175)
+	at com.microsoft.playwright.Locator.click(Locator.java:2493)
+	at com.FreeAccountFeatures.test_Delete_Created_Game(FreeAccountFeatures.java:493)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName(&quot;Edit&quot;))
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 44 more
+</pre></div></td>
+<td>82</td>
+<td>com.FreeAccountFeatures@17f9d882</td></tr>
+<tr>
+<td title='com.FreeAccountFeatures.test_Delete_Account()'><b>test_Delete_Account</b><br>Test class: com.FreeAccountFeatures</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName(&quot;Account&quot;))
+-     - locator resolved to &lt;a target=&quot;&quot; href=&quot;/settings&quot;&gt;Account&lt;/a&gt;
+-   - attempting click action
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is visible, enabled and stable
+-       - scrolling into view if needed
+-       - done scrolling
+-       - &lt;div class=&quot;gameTitle game-title-flex&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;sidebar-nav&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events
+-     - retrying click action
+-     - waiting 20ms
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is visible, enabled and stable
+-       - scrolling into view if needed
+-       - done scrolling
+-       - &lt;div class=&quot;gameTitle game-title-flex&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;sidebar-nav&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events
+-     - retrying click action
+-       - waiting 100ms
+-     151 × waiting for element to be visible, enabled and stable
+-         - element is visible, enabled and stable
+-         - scrolling into view if needed
+-         - done scrolling
+-         - &lt;div class=&quot;gameTitle game-title-flex&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;sidebar-nav&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events
+-       - retrying click action
+-         - waiting 500ms
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:175)
+	at com.microsoft.playwright.Locator.click(Locator.java:2493)
+	at com.FreeAccountFeatures.test_Delete_Account(FreeAccountFeatures.java:506)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName(&quot;Account&quot;))
+-     - locator resolved to &lt;a target=&quot;&quot; href=&quot;/settings&quot;&gt;Account&lt;/a&gt;
+-   - attempting click action
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is visible, enabled and stable
+-       - scrolling into view if needed
+-       - done scrolling
+-       - &lt;div class=&quot;gameTitle game-title-flex&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;sidebar-nav&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events
+-     - retrying click action
+-     - waiting 20ms
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is visible, enabled and stable
+-       - scrolling into view if needed
+-       - done scrolling
+-       - &lt;div class=&quot;gameTitle game-title-flex&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;sidebar-nav&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events
+-     - retrying click action
+-       - waiting 100ms
+-     151 × waiting for element to be visible, enabled and stable
+-         - element is visible, enabled and stable
+-         - scrolling into view if needed
+-         - done scrolling
+-         - &lt;div class=&quot;gameTitle game-title-flex&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;sidebar-nav&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events
+-       - retrying click action
+-         - waiting 500ms
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 44 more
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace664091267", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace664091267'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName(&quot;Account&quot;))
+-     - locator resolved to &lt;a target=&quot;&quot; href=&quot;/settings&quot;&gt;Account&lt;/a&gt;
+-   - attempting click action
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is visible, enabled and stable
+-       - scrolling into view if needed
+-       - done scrolling
+-       - &lt;div class=&quot;gameTitle game-title-flex&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;sidebar-nav&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events
+-     - retrying click action
+-     - waiting 20ms
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is visible, enabled and stable
+-       - scrolling into view if needed
+-       - done scrolling
+-       - &lt;div class=&quot;gameTitle game-title-flex&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;sidebar-nav&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events
+-     - retrying click action
+-       - waiting 100ms
+-     151 × waiting for element to be visible, enabled and stable
+-         - element is visible, enabled and stable
+-         - scrolling into view if needed
+-         - done scrolling
+-         - &lt;div class=&quot;gameTitle game-title-flex&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;sidebar-nav&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events
+-       - retrying click action
+-         - waiting 500ms
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:175)
+	at com.microsoft.playwright.Locator.click(Locator.java:2493)
+	at com.FreeAccountFeatures.test_Delete_Account(FreeAccountFeatures.java:506)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName(&quot;Account&quot;))
+-     - locator resolved to &lt;a target=&quot;&quot; href=&quot;/settings&quot;&gt;Account&lt;/a&gt;
+-   - attempting click action
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is visible, enabled and stable
+-       - scrolling into view if needed
+-       - done scrolling
+-       - &lt;div class=&quot;gameTitle game-title-flex&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;sidebar-nav&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events
+-     - retrying click action
+-     - waiting 20ms
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is visible, enabled and stable
+-       - scrolling into view if needed
+-       - done scrolling
+-       - &lt;div class=&quot;gameTitle game-title-flex&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;sidebar-nav&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events
+-     - retrying click action
+-       - waiting 100ms
+-     151 × waiting for element to be visible, enabled and stable
+-         - element is visible, enabled and stable
+-         - scrolling into view if needed
+-         - done scrolling
+-         - &lt;div class=&quot;gameTitle game-title-flex&quot;&gt;…&lt;/div&gt; from &lt;div class=&quot;sidebar-nav&quot;&gt;…&lt;/div&gt; subtree intercepts pointer events
+-       - retrying click action
+-         - waiting 500ms
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 44 more
+</pre></div></td>
+<td>82</td>
+<td>com.FreeAccountFeatures@17f9d882</td></tr>
+<tr>
+<td title='com.FreeAccountFeatures.test_Move_A_CreatedGame_From_AllGames_To_CreatedFolder()'><b>test_Move_A_CreatedGame_From_AllGames_To_CreatedFolder</b><br>Test class: com.FreeAccountFeatures</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;Create Folder New Folder&quot;))
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:175)
+	at com.microsoft.playwright.Locator.click(Locator.java:2493)
+	at com.FreeAccountFeatures.test_Move_A_CreatedGame_From_AllGames_To_CreatedFolder(FreeAccountFeatures.java:467)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;Create Folder New Folder&quot;))
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 44 more
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1636322481", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1636322481'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;Create Folder New Folder&quot;))
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:175)
+	at com.microsoft.playwright.Locator.click(Locator.java:2493)
+	at com.FreeAccountFeatures.test_Move_A_CreatedGame_From_AllGames_To_CreatedFolder(FreeAccountFeatures.java:467)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 80000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 80000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\frameDispatcher.js:158:30)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-14740074174495675561\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;Create Folder New Folder&quot;))
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 44 more
+</pre></div></td>
+<td>84</td>
+<td>com.FreeAccountFeatures@17f9d882</td></tr>
+<tr>
+<td title='com.FreeAccountFeatures.test_Preview_OF_CreatedGame()'><b>test_Preview_OF_CreatedGame</b><br>Test class: com.FreeAccountFeatures</td>
+<td><div><pre>org.opentest4j.AssertionFailedError: Locator expected to be visible
+Call log:
+  - Locator.expect with timeout 5000ms
+  - waiting for getByText(&quot;CATEG1&quot;)
+	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:69)
+	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:51)
+	at com.microsoft.playwright.impl.LocatorAssertionsImpl.expectTrue(LocatorAssertionsImpl.java:402)
+	at com.microsoft.playwright.impl.LocatorAssertionsImpl.isVisible(LocatorAssertionsImpl.java:397)
+	at com.microsoft.playwright.assertions.LocatorAssertions.isVisible(LocatorAssertions.java:782)
+	at com.FreeAccountFeatures.test_Preview_OF_CreatedGame(FreeAccountFeatures.java:290)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1089584667", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1089584667'><pre>org.opentest4j.AssertionFailedError: Locator expected to be visible
+Call log:
+  - Locator.expect with timeout 5000ms
+  - waiting for getByText(&quot;CATEG1&quot;)
+	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:69)
+	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:51)
+	at com.microsoft.playwright.impl.LocatorAssertionsImpl.expectTrue(LocatorAssertionsImpl.java:402)
+	at com.microsoft.playwright.impl.LocatorAssertionsImpl.isVisible(LocatorAssertionsImpl.java:397)
+	at com.microsoft.playwright.assertions.LocatorAssertions.isVisible(LocatorAssertions.java:782)
+	at com.FreeAccountFeatures.test_Preview_OF_CreatedGame(FreeAccountFeatures.java:290)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>11</td>
+<td>com.FreeAccountFeatures@17f9d882</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,85 +744,105 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.GamePlayByFreeUsers.test_Free_User_Create_Game_Using_AI()'><b>test_Free_User_Create_Game_Using_AI</b><br>Test class: com.GamePlayByFreeUsers</td>
-<td></td>
-<td>83</td>
-<td>com.GamePlayByFreeUsers@53fb3dab</td></tr>
-<tr>
-<td title='com.Login.Login_with_Invalid_username()'><b>Login_with_Invalid_username</b><br>Test class: com.Login</td>
-<td></td>
-<td>5</td>
-<td>com.Login@4be29ed9</td></tr>
-<tr>
 <td title='com.SignUP.Sign_Up_with_an_already_Registered_Email()'><b>Sign_Up_with_an_already_Registered_Email</b><br>Test class: com.SignUP</td>
 <td></td>
-<td>4</td>
-<td>com.SignUP@3a7442c7</td></tr>
-<tr>
-<td title='com.SignUP.SignUp_with_Password_ConfirmPassword_Missmatch()'><b>SignUp_with_Password_ConfirmPassword_Missmatch</b><br>Test class: com.SignUP</td>
-<td></td>
-<td>1</td>
-<td>com.SignUP@3a7442c7</td></tr>
+<td>3</td>
+<td>com.SignUP@7bba5817</td></tr>
 <tr>
 <td title='com.Login.Login_with_Invalid_Password()'><b>Login_with_Invalid_Password</b><br>Test class: com.Login</td>
 <td></td>
 <td>5</td>
-<td>com.Login@4be29ed9</td></tr>
+<td>com.Login@742ff096</td></tr>
 <tr>
-<td title='com.Login.Login_with_valid_usernameAndpassword()'><b>Login_with_valid_usernameAndpassword</b><br>Test class: com.Login</td>
+<td title='com.FreeAccountFeatures.test_Create_Game_In_NewAccount_Who_having_FreeAccount()'><b>test_Create_Game_In_NewAccount_Who_having_FreeAccount</b><br>Test class: com.FreeAccountFeatures</td>
 <td></td>
-<td>2</td>
-<td>com.Login@4be29ed9</td></tr>
+<td>79</td>
+<td>com.FreeAccountFeatures@17f9d882</td></tr>
+<tr>
+<td title='com.FreeAccountFeatures.test_SignUP_FreeAccount()'><b>test_SignUP_FreeAccount</b><br>Test class: com.FreeAccountFeatures</td>
+<td></td>
+<td>7</td>
+<td>com.FreeAccountFeatures@17f9d882</td></tr>
 <tr>
 <td title='com.Login.Login_with_Invalid_Gmail()'><b>Login_with_Invalid_Gmail</b><br>Test class: com.Login</td>
 <td></td>
 <td>5</td>
-<td>com.Login@4be29ed9</td></tr>
+<td>com.Login@742ff096</td></tr>
 <tr>
-<td title='com.SignUP.SignUp_with_an_Password_Containing_Invalid_Characters_Space()'><b>SignUp_with_an_Password_Containing_Invalid_Characters_Space</b><br>Test class: com.SignUP</td>
+<td title='com.GamePlayByFreeUsers.test_Free_User_Play_AIGenerated_Game()'><b>test_Free_User_Play_AIGenerated_Game</b><br>Test class: com.GamePlayByFreeUsers</td>
 <td></td>
-<td>1</td>
-<td>com.SignUP@3a7442c7</td></tr>
+<td>81</td>
+<td>com.GamePlayByFreeUsers@1c5920df</td></tr>
 <tr>
 <td title='com.SignUP.SignUp_with_an_Email_Containing_Invalid_Characters_Space()'><b>SignUp_with_an_Email_Containing_Invalid_Characters_Space</b><br>Test class: com.SignUP</td>
 <td></td>
 <td>1</td>
-<td>com.SignUP@3a7442c7</td></tr>
+<td>com.SignUP@7bba5817</td></tr>
+<tr>
+<td title='com.SignUP.SignUp_with_an_Password_Containing_Invalid_Characters_Space()'><b>SignUp_with_an_Password_Containing_Invalid_Characters_Space</b><br>Test class: com.SignUP</td>
+<td></td>
+<td>1</td>
+<td>com.SignUP@7bba5817</td></tr>
+<tr>
+<td title='com.Login.Login_with_Invalid_username()'><b>Login_with_Invalid_username</b><br>Test class: com.Login</td>
+<td></td>
+<td>5</td>
+<td>com.Login@742ff096</td></tr>
 <tr>
 <td title='com.Login.Login_with_valid_emailAndpassword()'><b>Login_with_valid_emailAndpassword</b><br>Test class: com.Login</td>
 <td></td>
-<td>3</td>
-<td>com.Login@4be29ed9</td></tr>
+<td>4</td>
+<td>com.Login@742ff096</td></tr>
 <tr>
 <td title='com.GamePlayByFreeUsers.test_Free_User_Creates_Game_Manually()'><b>test_Free_User_Creates_Game_Manually</b><br>Test class: com.GamePlayByFreeUsers</td>
 <td></td>
-<td>49</td>
-<td>com.GamePlayByFreeUsers@53fb3dab</td></tr>
+<td>56</td>
+<td>com.GamePlayByFreeUsers@1c5920df</td></tr>
 <tr>
-<td title='com.GamePlayByFreeUsers.test_Free_User_Play_AIGenerated_Game()'><b>test_Free_User_Play_AIGenerated_Game</b><br>Test class: com.GamePlayByFreeUsers</td>
+<td title='com.SignUP.SignUp_with_Password_ConfirmPassword_Missmatch()'><b>SignUp_with_Password_ConfirmPassword_Missmatch</b><br>Test class: com.SignUP</td>
 <td></td>
-<td>87</td>
-<td>com.GamePlayByFreeUsers@53fb3dab</td></tr>
+<td>1</td>
+<td>com.SignUP@7bba5817</td></tr>
+<tr>
+<td title='com.GamePlayByFreeUsers.test_Public_Game_Played_By_Logged_User_Who_having_Free_account()'><b>test_Public_Game_Played_By_Logged_User_Who_having_Free_account</b><br>Test class: com.GamePlayByFreeUsers</td>
+<td></td>
+<td>122</td>
+<td>com.GamePlayByFreeUsers@1c5920df</td></tr>
+<tr>
+<td title='com.Login.Login_with_valid_usernameAndpassword()'><b>Login_with_valid_usernameAndpassword</b><br>Test class: com.Login</td>
+<td></td>
+<td>2</td>
+<td>com.Login@742ff096</td></tr>
 <tr>
 <td title='com.GamePlayByFreeUsers.test_Free_User_Play_Manually_Created_Game()'><b>test_Free_User_Play_Manually_Created_Game</b><br>Test class: com.GamePlayByFreeUsers</td>
 <td></td>
-<td>122</td>
-<td>com.GamePlayByFreeUsers@53fb3dab</td></tr>
+<td>121</td>
+<td>com.GamePlayByFreeUsers@1c5920df</td></tr>
 <tr>
-<td title='com.SignUP.Sign_Up_with_Valid_Credentials()'><b>Sign_Up_with_Valid_Credentials</b><br>Test class: com.SignUP</td>
+<td title='com.GamePlayByFreeUsers.test_Free_User_Create_Game_Using_AI()'><b>test_Free_User_Create_Game_Using_AI</b><br>Test class: com.GamePlayByFreeUsers</td>
 <td></td>
-<td>15</td>
-<td>com.SignUP@3a7442c7</td></tr>
+<td>90</td>
+<td>com.GamePlayByFreeUsers@1c5920df</td></tr>
 <tr>
-<td title='com.SignUP.SignUp_with_a_Password_Less_Than_6_Characters()'><b>SignUp_with_a_Password_Less_Than_6_Characters</b><br>Test class: com.SignUP</td>
+<td title='com.GamePlayByFreeUsers.test_Public_Game_Played_By_Non_Logged_User()'><b>test_Public_Game_Played_By_Non_Logged_User</b><br>Test class: com.GamePlayByFreeUsers</td>
 <td></td>
-<td>1</td>
-<td>com.SignUP@3a7442c7</td></tr>
+<td>115</td>
+<td>com.GamePlayByFreeUsers@1c5920df</td></tr>
 <tr>
 <td title='com.SignUP.SignUp_with_an_Invalid_EmailID()'><b>SignUp_with_an_Invalid_EmailID</b><br>Test class: com.SignUP</td>
 <td></td>
 <td>1</td>
-<td>com.SignUP@3a7442c7</td></tr>
+<td>com.SignUP@7bba5817</td></tr>
+<tr>
+<td title='com.SignUP.SignUp_with_a_Password_Less_Than_6_Characters()'><b>SignUp_with_a_Password_Less_Than_6_Characters</b><br>Test class: com.SignUP</td>
+<td></td>
+<td>1</td>
+<td>com.SignUP@7bba5817</td></tr>
+<tr>
+<td title='com.SignUP.Sign_Up_with_Valid_Credentials()'><b>Sign_Up_with_Valid_Credentials</b><br>Test class: com.SignUP</td>
+<td></td>
+<td>15</td>
+<td>com.SignUP@7bba5817</td></tr>
 </table><p>
 </body>
 </html>

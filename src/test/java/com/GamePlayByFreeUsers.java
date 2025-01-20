@@ -22,7 +22,7 @@ import Resource.BaseTest;
 	public class GamePlayByFreeUsers extends BaseTest {
 
 			
-		@Test(enabled=false)
+		@Test(priority=1)
 		public void test_Public_Game_Played_By_Non_Logged_User() throws IOException, InterruptedException {
 			page.navigate(properties.getProperty("rootUrl"));
 			page.locator("form").getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName("Browse All Games")).click();
@@ -199,7 +199,7 @@ import Resource.BaseTest;
 
 	
 	
-	@Test(enabled=false)
+	@Test(priority=2)
 	public void test_Public_Game_Played_By_Logged_User_Who_having_Free_account() throws IOException, InterruptedException {
 		page.navigate(properties.getProperty("rootUrl"));
 		  page.waitForNavigation(() -> 
@@ -353,7 +353,7 @@ import Resource.BaseTest;
 
 	
 	
-	@Test(priority=1)
+	@Test(priority=3)
 	public void test_Free_User_Create_Game_Using_AI() throws IOException, InterruptedException {
 		 Thread.sleep(5000);
 		 
@@ -584,7 +584,7 @@ import Resource.BaseTest;
 	    }
 	    
 	
-	      @Test(priority=2)
+	      @Test(priority=4)
 	  	public void test_Free_User_Creates_Game_Manually() throws IOException, InterruptedException {
 	    	  Thread.sleep(5000);
 	    	  

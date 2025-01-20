@@ -6,14 +6,17 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.GamePlayByFreeUsers">
+      <class name="com.FreeAccountFeatures">
         <methods>
-          <include name="test_Free_User_Create_Game_Using_AI"/>
-          <include name="test_Free_User_Play_AIGenerated_Game"/>
+          <include name="test_Preview_OF_CreatedGame"/>
+          <include name="test_Delete_Folder"/>
           <include name="setUp"/>
+          <include name="test_Move_A_CreatedGame_From_AllGames_To_CreatedFolder"/>
+          <include name="test_Delete_Created_Game"/>
           <include name="quitPlaywright"/>
+          <include name="test_Delete_Account"/>
         </methods>
-      </class> <!-- com.GamePlayByFreeUsers -->
+      </class> <!-- com.FreeAccountFeatures -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

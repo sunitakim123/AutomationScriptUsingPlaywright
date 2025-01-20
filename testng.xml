@@ -8,9 +8,13 @@
     <classes>
       <class name="Resource.BaseTest"/>
   
-<class name="com.TestcaseLogin"/>
   
-    
+   <class name="com.SignUP"/>
+   <class name="com.Login"/>
+      
+<class name="com.FreeAccountFeatures"/>
+   <class name="com.GamePlayByFreeUsers"/> 
+
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
