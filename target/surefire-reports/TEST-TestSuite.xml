@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="787.353" tests="26" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="796.447" tests="26" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\DELL\AppData\Local\Temp\surefire17879187570745860490\surefirebooter-20250122163825617_3.jar C:\Users\DELL\AppData\Local\Temp\surefire17879187570745860490 2025-01-22T16-38-25_372-jvmRun1 surefire-20250122163825617_1tmp surefire_0-20250122163825617_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\DELL\AppData\Local\Temp\surefire15077555095577765189\surefirebooter-20250127114155162_3.jar C:\Users\DELL\AppData\Local\Temp\surefire15077555095577765189 2025-01-27T11-41-54_936-jvmRun1 surefire-20250127114155162_1tmp surefire_0-20250127114155162_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\DELL\eclipse-workspace\Ram\AutomationUsingPlaywright\target\test-classes;C:\Users\DELL\eclipse-workspace\Ram\AutomationUsingPlaywright\target\classes;C:\Users\DELL\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\DELL\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Users\DELL\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar;C:\Users\DELL\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar;C:\Users\DELL\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\DELL\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar;C:\Users\DELL\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\DELL\.m2\repository\org\testng\testng\7.8.0\testng-7.8.0.jar;C:\Users\DELL\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\DELL\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\DELL\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;C:\Users\DELL\.m2\repository\com\sun\mail\javax.mail\1.6.2\javax.mail-1.6.2.jar;C:\Users\DELL\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\DELL\.m2\repository\com\microsoft\playwright\playwright\1.49.0\playwright-1.49.0.jar;C:\Users\DELL\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\DELL\.m2\repository\com\microsoft\playwright\driver\1.49.0\driver-1.49.0.jar;C:\Users\DELL\.m2\repository\com\microsoft\playwright\driver-bundle\1.49.0\driver-bundle-1.49.0.jar;C:\Users\DELL\.m2\repository\org\apache\maven\surefire\surefire-booter\3.0.0-M4\surefire-booter-3.0.0-M4.jar;C:\Users\DELL\.m2\repository\org\apache\maven\surefire\surefire-api\3.0.0-M4\surefire-api-3.0.0-M4.jar;C:\Users\DELL\.m2\repository\org\apache\maven\surefire\surefire-logger-api\3.0.0-M4\surefire-logger-api-3.0.0-M4.jar;C:\Users\DELL\.m2\repository\org\projectlombok\lombok\1.18.36\lombok-1.18.36.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\DELL\AppData\Local\Temp\surefire17879187570745860490\surefirebooter-20250122163825617_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\DELL\AppData\Local\Temp\surefire15077555095577765189\surefirebooter-20250127114155162_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
@@ -57,7 +57,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="Sign_Up_with_Valid_Credentials" classname="com.SignUP" time="13.034">
+  <testcase name="Sign_Up_with_Valid_Credentials" classname="com.SignUP" time="12.373">
     <system-out><![CDATA[OS is:-windows 11
 Sign_Up_with_Valid_Credentials test case got Passed
 After performing  Sign up, I have deleted the new account and fetching the title of the page:-Classroom Jeopardy Review Game | Buzzer Mode | Factile
@@ -67,107 +67,107 @@ SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 ]]></system-err>
   </testcase>
-  <testcase name="Sign_Up_with_an_already_Registered_Email" classname="com.SignUP" time="4.0">
+  <testcase name="Sign_Up_with_an_already_Registered_Email" classname="com.SignUP" time="3.398">
     <system-out><![CDATA[Sign_Up_with_an_already_Registered_Email test case got Passed
 ]]></system-out>
   </testcase>
-  <testcase name="SignUp_with_an_Invalid_EmailID" classname="com.SignUP" time="1.715">
+  <testcase name="SignUp_with_an_Invalid_EmailID" classname="com.SignUP" time="1.365">
     <system-out><![CDATA[SignUp_with_an_Invalid_EmailID test case got Passed
 ]]></system-out>
   </testcase>
-  <testcase name="SignUp_with_Password_ConfirmPassword_Missmatch" classname="com.SignUP" time="1.64">
+  <testcase name="SignUp_with_Password_ConfirmPassword_Missmatch" classname="com.SignUP" time="1.254">
     <system-out><![CDATA[SignUp_with_Password_ConfirmPassword_Missmatchtest test case got Passed
 ]]></system-out>
   </testcase>
-  <testcase name="SignUp_with_a_Password_Less_Than_6_Characters" classname="com.SignUP" time="1.639">
+  <testcase name="SignUp_with_a_Password_Less_Than_6_Characters" classname="com.SignUP" time="1.228">
     <system-out><![CDATA[SignUp_with_a_Password_Less_Than_6_Characters test case got Passed
 ]]></system-out>
   </testcase>
-  <testcase name="SignUp_with_an_Email_Containing_Invalid_Characters_Space" classname="com.SignUP" time="1.671">
+  <testcase name="SignUp_with_an_Email_Containing_Invalid_Characters_Space" classname="com.SignUP" time="1.233">
     <system-out><![CDATA[SignUp_with_an_Email_Containing_Invalid_Characters_Space test case got Passed
 ]]></system-out>
   </testcase>
-  <testcase name="SignUp_with_an_Password_Containing_Invalid_Characters_Space" classname="com.SignUP" time="1.488">
+  <testcase name="SignUp_with_an_Password_Containing_Invalid_Characters_Space" classname="com.SignUP" time="1.472">
     <system-out><![CDATA[SignUp_with_an_Password_Containing_Invalid_Characters_Space test case got Passed
 ]]></system-out>
   </testcase>
-  <testcase name="Login_with_valid_usernameAndpassword" classname="com.Login" time="3.236">
+  <testcase name="Login_with_valid_usernameAndpassword" classname="com.Login" time="2.18">
     <system-out><![CDATA[Login_with_valid_usernameAndpassword test case got Passed
 ]]></system-out>
   </testcase>
-  <testcase name="Login_with_valid_emailAndpassword" classname="com.Login" time="4.261">
+  <testcase name="Login_with_valid_emailAndpassword" classname="com.Login" time="3.993">
     <system-out><![CDATA[Login_with_valid_emailAndpassword test case got Passed
 ]]></system-out>
   </testcase>
-  <testcase name="Login_with_Invalid_username" classname="com.Login" time="5.469">
+  <testcase name="Login_with_Invalid_username" classname="com.Login" time="5.245">
     <system-out><![CDATA[Login_with_Invalid_username>> test case got Passed
 ]]></system-out>
   </testcase>
-  <testcase name="Login_with_Invalid_Gmail" classname="com.Login" time="5.711">
+  <testcase name="Login_with_Invalid_Gmail" classname="com.Login" time="5.238">
     <system-out><![CDATA[Login_with_Invalid_Gmail>> test case got Passed
 ]]></system-out>
   </testcase>
-  <testcase name="Login_with_Invalid_Password" classname="com.Login" time="5.735">
+  <testcase name="Login_with_Invalid_Password" classname="com.Login" time="5.304">
     <system-out><![CDATA[Login_with_Invalid_Password>> test case got Passed
 ]]></system-out>
   </testcase>
-  <testcase name="test_SignUP_FreeAccount" classname="com.FreeAccountFeatures" time="7.662">
-    <system-out><![CDATA[26048d7e1@example.com
+  <testcase name="test_SignUP_FreeAccount" classname="com.FreeAccountFeatures" time="7.214">
+    <system-out><![CDATA[f0ae7f301@example.com
 ]]></system-out>
   </testcase>
-  <testcase name="test_Create_Game_In_NewAccount_Who_having_FreeAccount" classname="com.FreeAccountFeatures" time="82.864">
+  <testcase name="test_Create_Game_In_NewAccount_Who_having_FreeAccount" classname="com.FreeAccountFeatures" time="81.023">
     <system-out><![CDATA[A new user with a free account has successfully created a game. 
 ]]></system-out>
   </testcase>
-  <testcase name="test_Preview_OF_CreatedGame" classname="com.FreeAccountFeatures" time="13.845">
+  <testcase name="test_Preview_OF_CreatedGame" classname="com.FreeAccountFeatures" time="13.345">
     <system-out><![CDATA[A new user with a free account has successfully previewed the game they created.
 ]]></system-out>
   </testcase>
-  <testcase name="test_Preview_A_Public_Game" classname="com.FreeAccountFeatures" time="16.909">
+  <testcase name="test_Preview_A_Public_Game" classname="com.FreeAccountFeatures" time="15.606">
     <system-out><![CDATA[Preview a public game is working fine
 ]]></system-out>
   </testcase>
-  <testcase name="test_Move_A_CreatedGame_From_AllGames_To_CreatedFolder" classname="com.FreeAccountFeatures" time="10.485">
+  <testcase name="test_Move_A_CreatedGame_From_AllGames_To_CreatedFolder" classname="com.FreeAccountFeatures" time="8.929">
     <system-out><![CDATA[A new user with a free account has created a folder and moved the game from AllGames to CreatedFolder.
 ]]></system-out>
   </testcase>
-  <testcase name="test_Delete_Folder" classname="com.FreeAccountFeatures" time="4.502">
+  <testcase name="test_Delete_Folder" classname="com.FreeAccountFeatures" time="4.471">
     <system-out><![CDATA[A new user with a free account has successfully deleted a folder they previously created.
 ]]></system-out>
   </testcase>
-  <testcase name="test_Delete_Created_Game" classname="com.FreeAccountFeatures" time="7.293">
+  <testcase name="test_Delete_Created_Game" classname="com.FreeAccountFeatures" time="7.093">
     <system-out><![CDATA[A new user with a free account has successfully deleted a created Game they previously created.
 ]]></system-out>
   </testcase>
-  <testcase name="test_Delete_Account" classname="com.FreeAccountFeatures" time="4.565">
+  <testcase name="test_Delete_Account" classname="com.FreeAccountFeatures" time="4.095">
     <system-out><![CDATA[A New user successfully deleted account.
 ]]></system-out>
   </testcase>
-  <testcase name="test_Public_Game_Played_By_Non_Logged_User" classname="com.GamePlayByFreeUsers" time="111.997">
+  <testcase name="test_Public_Game_Played_By_Non_Logged_User" classname="com.GamePlayByFreeUsers" time="114.011">
     <system-out><![CDATA[A non-logged-in user has successfully played a public game.
 ]]></system-out>
   </testcase>
-  <testcase name="test_Public_Game_Played_By_Logged_User_Who_having_Free_account" classname="com.GamePlayByFreeUsers" time="116.788">
+  <testcase name="test_Public_Game_Played_By_Logged_User_Who_having_Free_account" classname="com.GamePlayByFreeUsers" time="117.727">
     <system-out><![CDATA[A new user with a free account has successfully played a public game.
 ]]></system-out>
   </testcase>
-  <testcase name="test_Free_User_Create_Game_Using_AI" classname="com.GamePlayByFreeUsers" time="86.709">
-    <system-out><![CDATA[c1076dfa1@example.com
+  <testcase name="test_Free_User_Create_Game_Using_AI" classname="com.GamePlayByFreeUsers" time="85.971">
+    <system-out><![CDATA[7584d2451@example.com
 
 A new user with a free account has successfully created a game using AI.
 ]]></system-out>
   </testcase>
-  <testcase name="test_Free_User_Play_AIGenerated_Game" classname="com.GamePlayByFreeUsers" time="80.854">
+  <testcase name="test_Free_User_Play_AIGenerated_Game" classname="com.GamePlayByFreeUsers" time="86.368">
     <system-out><![CDATA[A new user with a free account has played an AI-generated game that they created.
 ]]></system-out>
   </testcase>
-  <testcase name="test_Free_User_Creates_Game_Manually" classname="com.GamePlayByFreeUsers" time="54.167">
-    <system-out><![CDATA[67a0502f1@example.com
+  <testcase name="test_Free_User_Creates_Game_Manually" classname="com.GamePlayByFreeUsers" time="54.157">
+    <system-out><![CDATA[415424db1@example.com
 
 A new user with a free account has successfully created a game manually.
 ]]></system-out>
   </testcase>
-  <testcase name="test_Free_User_Play_Manually_Created_Game" classname="com.GamePlayByFreeUsers" time="117.378">
+  <testcase name="test_Free_User_Play_Manually_Created_Game" classname="com.GamePlayByFreeUsers" time="121.822">
     <system-out><![CDATA[A new user with a free account has played a manually created game.
 ]]></system-out>
   </testcase>

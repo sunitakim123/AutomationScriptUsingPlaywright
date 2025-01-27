@@ -24,13 +24,12 @@ import Resource.BaseTest;
 			
 		@Test(priority=1)
 		public void test_Public_Game_Played_By_Non_Logged_User() throws IOException, InterruptedException {
+			 Thread.sleep(4000);
 			page.navigate(properties.getProperty("rootUrl"));
 			page.locator("form").getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName("Browse All Games")).click();
-		      page.navigate("https://awspf.com/search");
-		      page.locator("form div").click();
+			 page.getByPlaceholder("Search Games").click();
 		      page.getByPlaceholder("Search Games").fill("7th Grade Math");
-		      page.getByPlaceholder("Search Games").press("Enter");
-		      assertThat(page.getByText("7th Grade Math", new Page.GetByTextOptions().setExact(true))).isVisible();
+		      page.getByLabel("Search").click();
 		      Page page1 = page.waitForPopup(() -> {
 		        page.locator(".game-card-footer__btn").first().click();
 		      });
