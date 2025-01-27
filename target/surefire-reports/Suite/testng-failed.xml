@@ -6,17 +6,28 @@
   </listeners>
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
-      <class name="com.FreeAccountFeatures">
+      <class name="com.Login">
         <methods>
-          <include name="test_Preview_OF_CreatedGame"/>
-          <include name="test_Delete_Folder"/>
+          <include name="Login_with_valid_emailAndpassword"/>
           <include name="setUp"/>
-          <include name="test_Move_A_CreatedGame_From_AllGames_To_CreatedFolder"/>
           <include name="quitPlaywright"/>
-          <include name="test_Delete_Created_Game"/>
-          <include name="test_Delete_Account"/>
         </methods>
-      </class> <!-- com.FreeAccountFeatures -->
+      </class> <!-- com.Login -->
+      <class name="com.GamePlayByFreeUsers">
+        <methods>
+          <include name="test_Public_Game_Played_By_Logged_User_Who_having_Free_account"/>
+          <include name="setUp"/>
+          <include name="quitPlaywright"/>
+        </methods>
+      </class> <!-- com.GamePlayByFreeUsers -->
+      <class name="com.SignUP">
+        <methods>
+          <include name="setUp"/>
+          <include name="Sign_Up_with_Valid_Credentials"/>
+          <include name="quitPlaywright"/>
+          <include name="Sign_Up_with_an_already_Registered_Email"/>
+        </methods>
+      </class> <!-- com.SignUP -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

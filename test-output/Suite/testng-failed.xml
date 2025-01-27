@@ -6,13 +6,16 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="com.Login">
+        <methods>
+          <include name="Login_with_Invalid_username"/>
+          <include name="setUp"/>
+          <include name="quitPlaywright"/>
+        </methods>
+      </class> <!-- com.Login -->
       <class name="com.FreeAccountFeatures">
         <methods>
-          <include name="test_Preview_OF_CreatedGame"/>
-          <include name="test_Delete_Folder"/>
           <include name="setUp"/>
-          <include name="test_Move_A_CreatedGame_From_AllGames_To_CreatedFolder"/>
-          <include name="test_Delete_Created_Game"/>
           <include name="quitPlaywright"/>
           <include name="test_Delete_Account"/>
         </methods>
